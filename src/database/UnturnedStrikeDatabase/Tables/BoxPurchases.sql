@@ -1,0 +1,9 @@
+﻿CREATE TABLE dbo.BoxPurchases
+(
+	Id INT IDENTITY(1,1) NOT NULL CONSTRAINT PK_BoxPurchases PRIMARY KEY,
+	BoxId INT NOT NULL CONSTRAINT FK_BoxPurchases_BoxId FOREIGN KEY REFERENCES dbo.Boxes(Id),
+	PlayerId CHAR(17) NOT NULL CONSTRAINT FK_BoxPurchases_PlayerId FOREIGN KEY REFERENCES dbo.Players(Id),
+	PlayerWeaponSkinId INT NOT NULL CONSTRAINT FK_BoxPurchases_PlayerWeaponSkinId FOREIGN KEY REFERENCES dbo.PlayerWeaponSkins(Id),
+	Amount DECIMAL(9, 2) NOT NULL,
+	CreateDate DATETIME2 NOT NULL CONSTRAINT DF_BoxPurchases_CreateDate DEFAULT GETUTCDATE()
+)

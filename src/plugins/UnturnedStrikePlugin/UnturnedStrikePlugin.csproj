@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D2471CE-5CDB-4353-8ACB-ABFFBF099201}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnturnedStrike.Plugin</RootNamespace>
+    <AssemblyName>UnturnedStrikePlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Lib.Harmony.2.1.1\lib\net45\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\libraries\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.API, Version=4.9.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Rocket.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Core, Version=4.9.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Rocket.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Unturned, Version=4.9.3.13, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Rocket.Unturned.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetTransport, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\SDG.NetTransport.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bombsite\BombCarrierComponent.cs" />
+    <Compile Include="Bombsite\BombComponent.cs" />
+    <Compile Include="Commands\Admin\AddHostageCommand.cs" />
+    <Compile Include="Commands\Admin\AddWeaponCommand.cs" />
+    <Compile Include="Commands\Player\BuyCommand.cs" />
+    <Compile Include="Commands\Player\ChangeTeamCommand.cs" />
+    <Compile Include="Commands\Other\ClearInventoryCommand.cs" />
+    <Compile Include="Commands\Admin\ReloadWeaponsCommand.cs" />
+    <Compile Include="Commands\Admin\RestartGameCommand.cs" />
+    <Compile Include="Commands\Player\TeamCommand.cs" />
+    <Compile Include="Commands\Admin\MakeRegionCommand.cs" />
+    <Compile Include="Commands\Admin\RemoveWeaponCommand.cs" />
+    <Compile Include="Commands\Admin\SetNodeCommand.cs" />
+    <Compile Include="Commands\Admin\SetSpawnCommand.cs" />
+    <Compile Include="Commands\Player\TeamsCommand.cs" />
+    <Compile Include="Components\CounterTerroristPlayer.cs" />
+    <Compile Include="Components\LobbyPlayer.cs" />
+    <Compile Include="Components\TerroristPlayer.cs" />
+    <Compile Include="Components\GamePlayer.cs" />
+    <Compile Include="Components\IUnturnedStrikePlayer.cs" />
+    <Compile Include="Components\UnturnedStrikePlayer.cs" />
+    <Compile Include="Effects\BalanceEffectComponent.cs" />
+    <Compile Include="Effects\BuyMenuEffectComponent.cs" />
+    <Compile Include="Effects\GameWinEffectComponent.cs" />
+    <Compile Include="Effects\LeaderboardEffectComponent.cs" />
+    <Compile Include="Effects\RoundsEffectComponent.cs" />
+    <Compile Include="Effects\TeamsEffectComponent.cs" />
+    <Compile Include="Effects\RoundWinEffectComponent.cs" />
+    <Compile Include="Effects\WarmupEffectComponent.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\PlayerClothingExtensions.cs" />
+    <Compile Include="Extensions\TeamTypeExtensions.cs" />
+    <Compile Include="Helpers\InventoryHelper.cs" />
+    <Compile Include="Helpers\LoadoutsHelper.cs" />
+    <Compile Include="Helpers\RegionsHelper.cs" />
+    <Compile Include="Helpers\TeamsHelper.cs" />
+    <Compile Include="Helpers\VIPHelper.cs" />
+    <Compile Include="Helpers\WarmupLoadoutsHelper.cs" />
+    <Compile Include="Models\EGameType.cs" />
+    <Compile Include="Models\EGameWinType.cs" />
+    <Compile Include="Models\EMVPType.cs" />
+    <Compile Include="Models\EPlayerSpawnType.cs" />
+    <Compile Include="Models\EWeaponTeam.cs" />
+    <Compile Include="Models\GameResults.cs" />
+    <Compile Include="Models\Hostage.cs" />
+    <Compile Include="Models\MVP.cs" />
+    <Compile Include="Models\PlayerStat.cs" />
+    <Compile Include="Models\RegionData.cs" />
+    <Compile Include="Models\ETeamType.cs" />
+    <Compile Include="Models\EWinType.cs" />
+    <Compile Include="Models\TeamLoadout.cs" />
+    <Compile Include="Models\TeamLoadoutClothing.cs" />
+    <Compile Include="Models\TeamLoadoutSkill.cs" />
+    <Compile Include="Models\TeamWeapon.cs" />
+    <Compile Include="Models\WeaponModel.cs" />
+    <Compile Include="Models\WeaponItem.cs" />
+    <Compile Include="Models\PlayerSpawn.cs" />
+    <Compile Include="Models\ConvertableVector3.cs" />
+    <Compile Include="Models\TeamClothes.cs" />
+    <Compile Include="Models\WeaponCategoryData.cs" />
+    <Compile Include="Models\JsonWeaponData.cs" />
+    <Compile Include="Models\JsonWeaponGunItem.cs" />
+    <Compile Include="Patches\BarricadeManager_Patches.cs" />
+    <Compile Include="Patches\LevelPlayers_getSpawn.cs" />
+    <Compile Include="Patches\LightingManager_Patches.cs" />
+    <Compile Include="Patches\PlayerClothing_Patches.cs" />
+    <Compile Include="Patches\PlayerCrafting_Patches.cs" />
+    <Compile Include="Patches\PlayerLife_Patches.cs" />
+    <Compile Include="Patches\PlayerQuests_Patches.cs" />
+    <Compile Include="Patches\UseableBarricade_Patches.cs" />
+    <Compile Include="Patches\UseableGun_Patches.cs" />
+    <Compile Include="Providers\JsonHostagesProvider.cs" />
+    <Compile Include="Providers\IHostagesProvider.cs" />
+    <Compile Include="Providers\IWeaponsProvider.cs" />
+    <Compile Include="Providers\JsonWeaponsProvider.cs" />
+    <Compile Include="Services\GameRulesService.cs" />
+    <Compile Include="Services\GlobalRoundService.cs" />
+    <Compile Include="Services\LobbyService.cs" />
+    <Compile Include="Services\HostageRoundService.cs" />
+    <Compile Include="Services\RoundStatisticsService.cs" />
+    <Compile Include="Services\DefuseRoundService.cs" />
+    <Compile Include="Services\GameStatisticsService.cs" />
+    <Compile Include="Services\TeamsService.cs" />
+    <Compile Include="Services\WarmupService.cs" />
+    <Compile Include="Storage\DataStorage.cs" />
+    <Compile Include="Helpers\SpawnsHelper.cs" />
+    <Compile Include="Services\GameService.cs" />
+    <Compile Include="UnturnedStrikeConfiguration.cs" />
+    <Compile Include="UnturnedStrikePlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BarricadeUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

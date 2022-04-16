@@ -1,0 +1,37 @@
+﻿@page "/"
+
+<div class="text-center mb-5">
+    <img src="/img/logo2.png" class="img-fluid" style="max-height: 350px;" />
+    <h1 class="font-weight-bold">Unturned Strike</h1>
+</div>
+
+<table class="mt-3 table table-sm table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Map</th>
+            <th scope="col">Players</th>
+            <th class="d-none d-lg-block" scope="col">IP:Port</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (GameServers != null)
+        {
+            @foreach (var server in GameServers.Where(x => x.IsOnline))
+            {
+                <tr>
+                    <td>@server.Name</td>
+                    <td>@server.Info.Map</td>
+                    <td>@server.Info.Players/@server.Info.MaxPlayers</td>
+                    <td class="d-none d-lg-block">@server.Address:@server.Port</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@if (GameServers == null)
+{
+    <div class="progress">
+        <div class="progress-bar progress-bar-indeterminate" role="progressbar"></div>
+    </div>
+} 

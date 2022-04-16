@@ -1,0 +1,93 @@
+﻿<div class="modal fade" id="@nameof(ManagePlayerWeaponSkinsModal)" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                @if (Player != null)
+                {
+                    <h5 class="modal-title">Manage @Player.SteamName Weapon Skins</h5>
+                }
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @if (PlayerWeaponSkins != null)
+                {
+                    <ul class="list-group">
+                        @foreach (var skin in PlayerWeaponSkins)
+                        {
+                            <li class="list-group-item">
+                                <img src="api/files/@skin.WeaponSkin.ImageFileId" width="32" height="32" class="mr-2" />
+                                <span>@skin.WeaponSkin.Name</span>
+                            </li>
+                        }
+                    </ul>
+                } else
+                {
+                    <h5>No Skins</h5>
+                }
+
+                @if (WeaponSkins != null)
+                {
+                    <EditForm Model="PlayerWeaponSkin" OnValidSubmit="SubmitPlayerWeaponSkinAsync" class="mt-2">
+                        <div class="form-group">
+                            <label>Select Skin</label>
+                            <InputSelectNumber @bind-Value="PlayerWeaponSkin.WeaponSkinId" class="custom-select">
+                                @foreach (var skin in WeaponSkins)
+                                {
+                                    <option value="@skin.Id">@skin.Name</option>
+                                }
+                            </InputSelectNumber>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Give Skin</button>
+                    </EditForm>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+    [Inject]
+    private HttpClient HttpClient { get; set; }
+
+    private Player Player { get; set; }
+    private List<PlayerWeaponSkin> PlayerWeaponSkins { get; set; }
+    private IEnumerable<WeaponSkin> WeaponSkins { get; set; }
+
+    private PlayerWeaponSkin PlayerWeaponSkin { get; set; } = new PlayerWeaponSkin();
+
+    protected override async Task OnInitializedAsync()
+    {
+        WeaponSkins = await HttpClient.GetFromJsonAsync<WeaponSkin[]>("api/weaponskins");
+    }
+
+    public async Task OpenAsync(Player player)
+    {
+        Player = player;
+        PlayerWeaponSkins = await HttpClient.GetFromJsonAsync<List<PlayerWeaponSkin>>($"api/weaponskins/inventory/{player.Id}");
+
+        PlayerWeaponSkin = new PlayerWeaponSkin() { PlayerId = Player.Id };
+
+        StateHasChanged();
+        await JSRuntime.ShowModalStaticAsync(nameof(ManagePlayerWeaponSkinsModal));
+    }
+
+    private async Task SubmitPlayerWeaponSkinAsync()
+    {
+        var response = await HttpClient.PostAsJsonAsync("api/weaponskins/player", PlayerWeaponSkin);
+
+        if (response.IsSuccessStatusCode)
+        {
+            PlayerWeaponSkins.Add(await response.Content.ReadFromJsonAsync<PlayerWeaponSkin>());
+        }
+    }
+}

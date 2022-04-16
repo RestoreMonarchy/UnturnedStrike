@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Transactions]
+(
+	Id INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_Transactions PRIMARY KEY,
+	PlayerId CHAR(17) NOT NULL CONSTRAINT FK_Transactions_PlayerId FOREIGN KEY REFERENCES dbo.Players(Id),
+	Email VARCHAR(255) NOT NULL,
+	TransactionId VARCHAR(19) NOT NULL CONSTRAINT UQ_Transactions_TransactionId UNIQUE,
+	Gross DECIMAL(9, 2) NOT NULL,
+	Fee DECIMAL(9, 2) NOT NULL,
+	Currency CHAR(3) NOT NULL,
+	CreateDate DATETIME2(0) NOT NULL CONSTRAINT DF_Transactions_CreateDate DEFAULT GETUTCDATE()
+)

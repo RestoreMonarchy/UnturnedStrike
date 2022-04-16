@@ -1,0 +1,148 @@
+﻿<div class="modal fade" id="@nameof(BoxModal)" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Text Box</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>            
+            <div class="modal-body">
+                <EditForm id="myForm" Model="ModelBox" OnValidSubmit="SubmitAsync">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <InputText @bind-Value="ModelBox.Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <InputTextArea @bind-Value="ModelBox.Description" class="form-control" rows="3" />
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        @*<InputFile @bind-FileId="ModelBox.ImageFileId" Accept="image/jpeg,image/png" />
+                        @if (ModelBox.ImageFileId != default)
+                        {
+                            <img src="@ModelBox.ImageUrl" style="max-height: 128px;" />
+                        }*@
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <InputNumber TValue="decimal" @bind-Value="ModelBox.Price" class="form-control" />
+                    </div>
+                    <div class="form-group form-check">
+                        <InputCheckbox @bind-Value="ModelBox.IsEnabled" class="form-check-input" />
+                        <label class="form-check-label">Enabled</label>
+                    </div>
+
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                </EditForm>
+
+                <div>
+                    <SkinSearch @ref="SkinSearch" OnWeaponSkinClicked="AddSkin" />
+                    <table class="table table-dark mt-2">
+                        <thead>
+                            <tr>
+                                <th>Weapon Skin</th>
+                                <th>Weight</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var skin in ModelBox.WeaponSkins)
+                            {
+                                <tr>
+                                    <td>@skin.WeaponSkin.Name</td>
+                                    <td>
+                                        <input type="number" @bind-value="@skin.Weight" @bind-value:event="oninput" />
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-danger" @onclick="() => RemoveSkin(skin)">remove</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="myForm" class="btn btn-success">@Text</button>
+                </div>            
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private SkinSearch SkinSearch { get; set; }
+
+    public void RemoveSkin(BoxWeaponSkin skin)
+    {
+        ModelBox.WeaponSkins.Remove(skin);
+        SkinSearch.AddWeaponSkin(skin.WeaponSkin);
+    }
+
+    public void AddSkin(WeaponSkin weaponSkin)
+    {
+        var skin = new BoxWeaponSkin()
+        {
+            WeaponSkinId = weaponSkin.Id,
+            WeaponSkin = weaponSkin
+        };
+
+        ModelBox.WeaponSkins.Add(skin);
+        SkinSearch.RemoveWeaponSkin(weaponSkin);
+    }
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+    [Inject]
+    private HttpClient HttpClient { get; set; }
+
+    [Parameter]
+    public EventCallback<Box> OnBoxCreated { get; set; }
+
+    [Parameter]
+    public EventCallback<Box> OnBoxUpdated { get; set; }
+
+    private bool isUpdate;
+
+    private string Text => isUpdate ? $"Update #{ModelBox.Id}" : "Create";
+
+    private Box ModelBox { get; set; } = new Box() { IsEnabled = true, WeaponSkins = new List<BoxWeaponSkin>() };
+
+    public async Task CreateBoxAsync()
+    {
+        ModelBox = new Box() { IsEnabled = true, WeaponSkins = new List<BoxWeaponSkin>() };
+        isUpdate = false;
+
+        SkinSearch.ResetWeaponSkins();
+
+        await JSRuntime.ShowModalStaticAsync(nameof(BoxModal));
+    }
+
+    public async Task UpdateBoxAsync(Box box)
+    {
+        ModelBox = box;
+        isUpdate = true;
+
+        SkinSearch.ResetWeaponSkins();
+        foreach (var skin in box.WeaponSkins)
+            SkinSearch.RemoveWeaponSkin(skin.WeaponSkin);
+
+        await JSRuntime.ShowModalStaticAsync(nameof(BoxModal));
+    }
+
+    private async Task SubmitAsync()
+    {
+        if (!isUpdate)
+            await OnBoxCreated.InvokeAsync(ModelBox);
+        else
+            await OnBoxUpdated.InvokeAsync(ModelBox);
+
+        await JSRuntime.HideModalAsync(nameof(BoxModal));
+    }
+}

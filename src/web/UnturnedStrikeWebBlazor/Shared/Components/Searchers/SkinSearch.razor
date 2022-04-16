@@ -1,0 +1,61 @@
+﻿@inject HttpClient HttpClient
+
+
+@if (weaponSkins != null)
+{
+    <div class="form-group dropdown @(searchString.Length > 2 ? "show" : "")">
+        <label>Search</label>
+        <input id="search" class="form-control" @bind-value="@searchString" @bind-value:event="oninput" placeholder="Search Skin" autocomplete="off" />
+        <div class="dropdown-menu @(searchString.Length > 2 ? "show" : "")">
+            @foreach (var skin in SearchedWeaponSkins)
+            {
+                <a class="dropdown-item" @onclick="() => ClickSkinAsync(skin)" href="javascript:void(0)">
+                    @skin.Name
+                </a>
+            }
+        </div>
+    </div>
+}
+
+@code {
+
+    [Parameter]
+    public EventCallback<WeaponSkin> OnWeaponSkinClicked { get; set; }
+
+    private string searchString = string.Empty;
+
+    private IEnumerable<WeaponSkin> SearchedWeaponSkins
+        => weaponSkins.Where(x => x.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase)).Take(3);
+
+    private List<WeaponSkin> weaponSkins { get; set; }
+
+    private IEnumerable<WeaponSkin> WeaponSkins { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        WeaponSkins = await HttpClient.GetFromJsonAsync<List<WeaponSkin>>("api/weaponskins");
+        ResetWeaponSkins();
+    }
+
+    public async Task ClickSkinAsync(WeaponSkin skin)
+    {
+        searchString = string.Empty;
+        StateHasChanged();
+        await OnWeaponSkinClicked.InvokeAsync(skin);
+    }
+
+    public void AddWeaponSkin(WeaponSkin weaponSkin)
+    {
+        weaponSkins.Add(weaponSkin);
+    }
+
+    public void RemoveWeaponSkin(WeaponSkin weaponSkin)
+    {
+        weaponSkins.RemoveAll(x => x.Id == weaponSkin.Id);
+    }
+
+    public void ResetWeaponSkins()
+    {
+        weaponSkins = WeaponSkins.ToList();
+    }
+}

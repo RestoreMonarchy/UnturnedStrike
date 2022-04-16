@@ -1,0 +1,119 @@
+﻿<div class="modal fade" id="@nameof(WeaponSkinModal)" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Text Weapon Skin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <EditForm Model="ModelWeaponSkin" OnValidSubmit="SubmitAsync">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Weapon ID</label>
+                        <InputSelectNumber @bind-Value="ModelWeaponSkin.WeaponId" class="custom-select">
+                            @if (Weapons != null)
+                            {
+                                @foreach (var weapon in Weapons)
+                                {
+                                    <option value="@weapon.Id">@weapon.Name (@weapon.Id)</option>
+                                }
+                            }
+                        </InputSelectNumber>
+                    </div>
+                    <div class="form-group">
+                        <label>Item ID</label>
+                        <InputNumber @bind-Value="ModelWeaponSkin.ItemId" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <InputText @bind-Value="ModelWeaponSkin.Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <InputTextArea @bind-Value="ModelWeaponSkin.Description" class="form-control" rows="3" />
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        @*<InputFile @bind-FileId="ModelWeaponSkin.ImageFileId" Accept="image/jpeg,image/png" />
+                        @if (ModelWeaponSkin.ImageFileId != default)
+                        {
+                            <img src="api/files/@ModelWeaponSkin.ImageFileId" style="max-height: 128px;" />
+                        }*@
+                    </div>
+                    <div class="form-group">
+                        <label>Rarity</label>
+                        <InputSelect @bind-Value="ModelWeaponSkin.Rarity" class="custom-select">
+                            <option value="Common">Common</option>
+                            <option value="Uncommon">Uncommon</option>
+                            <option value="Rare">Rare</option>
+                            <option value="Epic">Epic</option>
+                            <option value="Legendary">Legendary</option>
+                            <option value="Premium">Premium</option>
+                        </InputSelect>
+                    </div>
+                    
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">@Text</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+    [Inject]
+    private HttpClient HttpClient { get; set; }
+
+    [Parameter]
+    public EventCallback<WeaponSkin> OnWeaponSkinCreated { get; set; }
+
+    [Parameter]
+    public EventCallback<WeaponSkin> OnWeaponSkinUpdated { get; set; }
+
+    private IEnumerable<Weapon> Weapons { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Weapons = await HttpClient.GetFromJsonAsync<List<Weapon>>("api/weapons");
+    }
+
+    private bool isUpdate;
+
+    private string Text => isUpdate ? $"Update #{ModelWeaponSkin.Id}" : "Create";
+
+    private WeaponSkin ModelWeaponSkin { get; set; } = new WeaponSkin();
+
+    public async Task CreateWeaponSkinAsync()
+    {
+        ModelWeaponSkin = new WeaponSkin() {  };
+        isUpdate = false;
+        await JSRuntime.ShowModalStaticAsync(nameof(WeaponSkinModal));
+    }
+
+    public async Task UpdateWeaponSkinAsync(WeaponSkin weaponSkin)
+    {
+        ModelWeaponSkin = weaponSkin;
+        isUpdate = true;
+        await JSRuntime.ShowModalStaticAsync(nameof(WeaponSkinModal));
+    }
+
+    private async Task SubmitAsync()
+    {
+        if (!isUpdate)
+            await OnWeaponSkinCreated.InvokeAsync(ModelWeaponSkin);
+        else
+            await OnWeaponSkinUpdated.InvokeAsync(ModelWeaponSkin);
+
+        await JSRuntime.HideModalAsync(nameof(WeaponSkinModal));
+    }
+}

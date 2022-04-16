@@ -1,0 +1,118 @@
+﻿<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/img/logo.jpg" width="30" height="30" alt="Unturned Strike">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stats">Top</a>
+                </li>
+                <li class="nav-item dropdown">
+                    @*<a class="nav-link dropdown-toggle" href="javascript:void(0)" id="shopDropdown" data-toggle="dropdown">
+                        Shop
+                    </a>*@
+                    <div class="dropdown-menu">
+                        @*<a class="dropdown-item" href="/boxes">Boxes</a>*@
+                        <a class="dropdown-item" href="/vip">VIP</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="wikiDropdown" data-toggle="dropdown">
+                        Wiki
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/weaponswiki">Weapons</a>
+                        <a class="dropdown-item" href="/gamerules">Game Rules</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="otherDropdown" data-toggle="dropdown">
+                        Other
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" target="_blank" href="/discord">Discord</a>
+                        <a class="dropdown-item" target="_blank" href="/modpack">Modpack</a>
+                    </div>
+                </li>
+                @if (UserService.IsAdmin)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="dashboardDropdown" data-toggle="dropdown">
+                            Dashboard
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/dashboard/players">Players</a>
+                            <a class="dropdown-item" href="/dashboard/weapons">Weapons</a>
+                            <a class="dropdown-item" href="/dashboard/weaponSkins">Weapon Skins</a>
+                            <a class="dropdown-item" href="/dashboard/boxes">Boxes</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+
+            <AuthorizeView>
+                <Authorized>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" href="javascript:void(0)" id="profileDropdown" data-toggle="dropdown">
+                            @if (UserService.HasPlayer)
+                            {
+                                <img src="@UserService.Player.SteamIconUrl" class="navbar-profile-icon rounded-circle align-self-center mr-2" />
+                                <span class="navbar-profile-name">@UserService.Player.SteamName</span>
+                            }
+                            else
+                            {
+                                <span class="navbar-profile-name">Anonymous</span>
+                            }
+                        </button>
+
+                        <div class="dropdown-menu">
+                            @if (UserService.HasPlayer)
+                            {
+                                <a class="dropdown-item" href="/profiles/@UserService.PlayerId">Profile</a>
+                                @*<a class="dropdown-item" href="/inventory">Inventory</a>*@
+                                <div class="dropdown-divider"></div>
+                                @*<a class="dropdown-item" href="/balance">Balance: @UserService.Balance</a>*@
+                            }
+                            <a class="dropdown-item" href="/signout">Sign Out</a>
+                        </div>
+                    </div>
+                </Authorized>
+                <NotAuthorized>
+                    <a class="btn btn-primary d-flex" href="/signin">
+                        <span class="material-icons mr-2">login</span> Sign In
+                    </a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+    </div>    
+</nav>
+
+@code {
+    [Inject]
+    private UserService UserService { get; set; }
+    [Inject]
+    private NavigationManager NavigationManager { get; set; }
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await UserService.GetCurrentUserPlayerAsync();
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object sender, LocationChangedEventArgs args)
+    {
+        JSRuntime.HideNavbar("navbarToggler");
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[WeaponSkins]
+(
+	Id INT IDENTITY(1, 1) NOT NULL,
+	WeaponId INT NOT NULL CONSTRAINT DF_WeaponSkins_WeaponId FOREIGN KEY REFERENCES dbo.Weapons(Id),
+	ItemId INT NOT NULL,
+	Name NVARCHAR(255) NOT NULL,
+	Description NVARCHAR(500) NOT NULL,
+	ImageFileId INT NOT NULL CONSTRAINT FK_WeaponSkins_ImageFileId REFERENCES dbo.Files(Id),
+	Rarity VARCHAR(255) NOT NULL CONSTRAINT DF_WeaponSkins_Rarity DEFAULT 'Uncommon',
+	CONSTRAINT PK_WeaponSkins PRIMARY KEY (Id)
+)

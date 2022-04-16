@@ -1,0 +1,34 @@
+﻿@page "/vip"
+
+<div class="jumbotron">
+    <h1 class="display-4 text-md-center font-weight-bold">VIP Rank</h1>
+    <p class="lead">Features:</p>
+    <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item">Golden chat color on every Unturned Strike server</li>
+        <li class="list-group-item">VIP role on our Discord server</li>
+        <li class="list-group-item">Keep your money balance when changing the team</li>
+    </ul>
+    <div class="float-md-right pb-3">
+
+        @if (UserService.IsAuthenticated)
+        {
+            if (UserService.HasPlayer)
+            {
+                @if (Purchase != null)
+                {
+                    <h4>You are VIP since @Purchase.CreateDate</h4>
+                }
+                else
+                {
+                    <button class="btn btn-secondary @btnClass" @onclick="BuyVIPAsync" data-toggle="tooltip" data-placement="top" title="@btnTooltip">
+                        Buy For $10
+                    </button>
+                }
+            }
+        }
+        else
+        {
+            <h4 class="font-weight-bold mr-2 d-lg-inline">Price: $10 You have to sign in to buy</h4>
+        }
+    </div>
+</div>

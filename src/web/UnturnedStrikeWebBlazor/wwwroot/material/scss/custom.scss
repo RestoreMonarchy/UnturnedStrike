@@ -1,0 +1,38 @@
+﻿$primary: (
+    color: lighten(#1d2c49, 10%),
+    dark: #1d2c49,
+    light: lighten(#1d2c49, 20%)
+);
+
+$secondary: ( 
+    color: darken(#fea500, 10%),
+    dark: darken(#fea500, 20%),
+    light: #fea500
+);
+
+
+$body-bg: #212121;
+$body-color: white;
+
+$menu-bg: #212121;
+$menu-link-bg-hover: #424242;
+$menu-link-color: white;
+$menu-link-color-disabled: #c4c4c4;
+
+$dialog-content-bg: #424242;
+
+$textfield-plaintext-color: white;
+$textfield-color: white;
+$textfield-hint-color: white;
+
+
+
+$expansion-panel-bg: #424242;
+$expansion-panel-color: white;
+
+$jumbotron-bg: #424242;
+$jumbotron-color: white;
+
+$text-muted: #ded7d7;
+
+@import "material.scss";

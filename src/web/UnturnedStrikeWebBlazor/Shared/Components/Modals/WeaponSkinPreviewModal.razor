@@ -1,0 +1,42 @@
+﻿<div class="modal fade" id="@nameof(WeaponSkinPreviewModal)" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            @if (WeaponSkin != null)
+            {
+                <div class="modal-header">
+                    <h5 class="modal-title">@WeaponSkin.Name Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="weapon-img-preview border text-center">
+                        <img src="@WeaponSkin.ImageUrl" height="350" width="350" />
+                    </div>                    
+                    <h3 class="mt-2">@WeaponSkin.Name</h3>
+                    <div class="dropdown-divider"></div>
+                    <p>@WeaponSkin.Description</p>                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+    public WeaponSkin WeaponSkin { get; set; }
+
+    public async Task OpenAsync(WeaponSkin weaponSkin)
+    {
+        WeaponSkin = weaponSkin;
+        await JSRuntime.ShowModalAsync(nameof(WeaponSkinPreviewModal));
+        StateHasChanged();
+    }
+}

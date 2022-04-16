@@ -1,0 +1,18 @@
+﻿@page "/boxes"
+
+<div>
+    <h3>Boxes</h3>
+    @if (Boxes != null)
+    {
+        <div class="mt-2">
+            @foreach (var box in Boxes)
+            {
+                <div class="box">
+                    <img src="@box.ImageUrl" class="box-img" />
+                    <h3 class="box-title">@box.Name</h3>
+                    <button class="btn btn-outline-warning rounded-pill box-price"><span>Price: @box.Price.ToString("C")</span></button>
+                </div>
+            }
+        </div>        
+    }
+</div>

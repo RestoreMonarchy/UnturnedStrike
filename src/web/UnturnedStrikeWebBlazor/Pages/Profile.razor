@@ -1,0 +1,108 @@
+﻿@page "/profiles/{PlayerId}"
+
+@if (Player != null)
+{
+    <div class="d-flex">
+        <div class="mr-4">
+            <img src="@Player.SteamIconUrl" width="130" height="130" class="rounded-circle" />
+        </div>
+        <div class="align-self-center">
+            <h3>@Player.SteamName <img src="/img/flags/32x32/@(Player.Country?.ToLower() ?? "unkown").png" /></h3> 
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-lg-4">
+            <ul class="list-group">
+                <li class="list-group-item"><span class="material-icons">perm_identity</span> 
+                    <a href="https://steamcommunity.com/profiles/@Player.Id" target="_blank">@Player.Id</a>
+                </li>
+                <li class="list-group-item"><span class="material-icons">update</span> @Player.LastActivity</li>
+                <li class="list-group-item"><span class="material-icons">check</span> @Player.CreateDate</li>                
+            </ul>
+        </div>
+        <div class="col-lg-8">
+            @if (Player.Statistic != null)
+            {
+                <div class="row justify-content-center">
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.TotalKills Kills</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.TotalDeaths Deaths</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.TotalScore Score</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.TotalBombsDefused Bombs Defused</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.TotalBombsPlanted Bombs Planted</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p data-toggle="tooltip" data-placement="top" title="Kills Per Death">@Player.Statistic.KillsPerDeath.ToString("0.00") K/D ratio</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p data-toggle="tooltip" data-placement="top" title="Kills Per Game">@Player.Statistic.KillsPerGame.ToString("0.00") K/G ratio</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p data-toggle="tooltip" data-placement="top" title="Deaths Per Game">@Player.Statistic.DeathsPerGame.ToString("0.00") D/G ratio</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.GamesWon Games Won</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card m-1 bg-dark" style="max-width: 255px;">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>@Player.Statistic.GamesLost Games Lost</p>
+                            </blockquote>
+                        </div>
+                    </div>                    
+                </div>
+            }
+        </div>
+    </div>
+    
+}
+else
+{
+    <div class="progress">
+        <div class="progress-bar progress-bar-indeterminate" role="progressbar"></div>
+    </div>
+}

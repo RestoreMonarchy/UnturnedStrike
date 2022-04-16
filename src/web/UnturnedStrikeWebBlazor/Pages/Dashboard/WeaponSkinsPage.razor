@@ -1,0 +1,39 @@
+﻿@page "/dashboard/weaponskins"
+
+<div class="mb-3 d-inline-flex">
+    <h3 class="mr-2">Weapon Skins</h3>
+    <button class="btn btn-primary" @onclick="ShowCreateWeaponSkinModalAsync">Create Weapon Skin</button>
+</div>
+
+<div class="table-responsive mb-4">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col" class="d-none d-lg-block">Name</th>
+                <th scope="col">Item Id</th>
+                <th scope="col" class="d-none d-lg-block">Rarity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (WeaponSkins != null)
+            {
+                @foreach (var weaponSkin in WeaponSkins)
+                {
+                    <tr>
+                        <td>@weaponSkin.Id</td>
+                        <td><img src="api/files/@weaponSkin.ImageFileId" class="icon" /></td>
+                        <td class="d-none d-lg-block">@weaponSkin.Name</td>
+                        <td>@weaponSkin.ItemId</td>
+                        <td class="d-none d-lg-block">@weaponSkin.Rarity</td>
+                        <td><button class="btn btn-sm btn-secondary" @onclick="() => ShowUpdateWeaponSkinModalAsync(weaponSkin)">Edit</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<WeaponSkinModal @ref="Modal" OnWeaponSkinCreated="UploadCreateWeaponSkinAsync" OnWeaponSkinUpdated="UploadUpdateWeaponSkinAsync" />

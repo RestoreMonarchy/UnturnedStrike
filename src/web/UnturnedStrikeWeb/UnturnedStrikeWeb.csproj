@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OpenId.Steam" Version="5.0.0" />
+    <PackageReference Include="Discord.Net.Webhook" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.13" />
+    <PackageReference Include="SteamWebAPI2" Version="4.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\api\UnturnedStrikeAPI\UnturnedStrikeAPI.csproj" />
+    <ProjectReference Include="..\..\database\UnturnedStrikeDatabaseProvider\UnturnedStrikeDatabaseProvider.csproj" />
+    <ProjectReference Include="..\UnturnedStrikeWebBlazor\UnturnedStrikeWebBlazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SteamQueryNet">
+      <HintPath>lib\SteamQueryNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>

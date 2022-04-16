@@ -1,0 +1,48 @@
+﻿@page "/balance"
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-5 mb-2">
+            <h4>Current Balance: @UserService.Balance</h4>
+            <div class="input-group mt-1">
+                <select @bind="Amount" class="custom-select">
+                    <option value="10">$10</option>
+                    <option value="15">$15</option>
+                    <option value="25">$25</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-primary" @onclick="AddFunds">Add Funds</button>
+                </div>
+                <br /><span>* Add funds will redirect you to PayPal checkout</span>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <h5>Transactions History</h5>
+            <table class="table table-dark table-bordered">
+                <thead>
+                    <tr>
+                        <th class="d-none d-md-block">ID</th>
+                        <th>Amount</th>
+                        <th class="d-none d-lg-block">Email</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Transactions != null)
+                    {
+                        foreach (var transaction in Transactions.OrderByDescending(x => x.CreateDate))
+                        {
+                            <tr>
+                                <td class="d-none d-md-block">@transaction.Id</td>
+                                <td>@transaction.Gross @transaction.Currency</td>
+                                <td class="d-none d-lg-block">@transaction.Email</td>
+                                <td>@transaction.CreateDate</td>
+                            </tr>
+                        }
+                    }
+                </tbody>                
+            </table>
+        </div>
+    </div>
+</div>
+

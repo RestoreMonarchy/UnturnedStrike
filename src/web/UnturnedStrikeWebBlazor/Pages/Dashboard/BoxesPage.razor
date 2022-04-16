@@ -1,0 +1,36 @@
+﻿@page "/dashboard/boxes"
+
+<div class="mb-3 d-inline-flex">
+    <h3 class="mr-2">Boxes</h3>
+    <button class="btn btn-primary" @onclick="ShowCreateBoxModalAsync">Create Box</button>
+</div>
+
+<div class="table-responsive mb-4">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col" class="d-none d-lg-block">Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Boxes != null)
+            {
+                @foreach (var box in Boxes)
+                {
+                    <tr>
+                        <td>@box.Id</td>
+                        <td><img src="api/files/@box.ImageFileId" class="icon" /></td>
+                        <td class="d-none d-lg-block">@box.Name</td>
+                        <td><button class="btn btn-sm btn-secondary" @onclick="() => ShowUpdateBoxModalAsync(box)">Edit</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<BoxModal @ref="Modal" OnBoxCreated="UploadCreateBoxAsync" OnBoxUpdated="UploadUpdateBoxAsync" />

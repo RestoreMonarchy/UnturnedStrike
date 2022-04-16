@@ -1,0 +1,34 @@
+﻿@page "/gamerules"
+
+
+<div class="jumbotron">
+    <h2>Game Rules</h2>
+    <p>They are close to CS:GO casual game rules</p>
+    <ul>
+        <li>The game has total of 16 rounds, to win the game team has to win 9 rounds</li>
+        <li>There's a 15 seconds freezetime at the beginning of each round</li>
+        <li>Max team players is 10</li>
+        <li>The round can be won either by killing whole enemy team, defusing the bomb or detonating the bomb</li>
+        <li>Counter Terrorists can defuse the bomb by salvaging it (takes 5 seconds)</li>
+        <li>Terrorists can plant the bomb only on one of two bomb sites (detonates after 40 seconds)</li>
+        <li><b>There's no notification sound when Counter Terrorist starts defusing the bomb!</b></li>
+        <li>The MVP is given to player who defused the bomb, planted the bomb or killed the most of enemy team</li>
+        <li>All game statistics and results are stored in database and can be displayed on website</li>
+    </ul>
+    <h4>Commands</h4>
+    <ul>
+        <li>/team - Opens a team choosing UI, but only if you're not in team yet</li>
+        <li>/changeteam - Kills you and changes your team, but only if they are not balanced</li>
+        <li>/buy - Opens buy menu, but only if it's freeze time</li>
+        <li>/teams - Shows each team players count</li>
+    </ul>
+    <h4>Hotkeys</h4>
+    <ul>
+        <li><kbd>.</kbd> - Shows the leaderboard UI while you hold it</li>
+        <li><kbd>,</kbd> - Opens buy menu, but only if it's freeze time</li>
+    </ul>
+</div>
+
+@code {
+
+}

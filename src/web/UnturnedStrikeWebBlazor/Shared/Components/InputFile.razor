@@ -1,0 +1,55 @@
+﻿@*@using System.Net.Http.Headers
+@using Tewr.Blazor.FileReader 
+
+<div class="custom-file">
+    <input class="custom-file-input" type="file" @ref="inputReference" @onchange="UpdateFileAsync" accept="@Accept" />
+    <label class="custom-file-label">Choose file</label>
+</div>
+
+@code {
+
+    [Parameter]
+    public int? FileId { get; set; }
+    [Parameter]
+    public EventCallback<int?> FileIdChanged { get; set; }
+
+    [Parameter]
+    public string Accept { get; set; }
+
+    private ElementReference inputReference;
+    private IFileReference fileReference;
+    private IFileInfo fileInfo;
+
+    [Inject]
+    private IFileReaderService FileReaderService { get; set; }
+
+    [Inject]
+    private HttpClient HttpClient { get; set; }
+
+    private async Task UpdateFileAsync()
+    {
+        fileReference = (await FileReaderService.CreateReference(inputReference).EnumerateFilesAsync()).FirstOrDefault();
+
+        if (fileReference != null)
+        {
+            fileInfo = await fileReference.ReadFileInfoAsync();
+
+            var msg = new HttpRequestMessage(HttpMethod.Post, $"api/files")
+            {
+                Content = new MultipartFormDataContent()
+            };
+
+            var content = new StreamContent(await fileReference.CreateMemoryStreamAsync());
+            content.Headers.ContentType = MediaTypeHeaderValue.Parse(fileInfo.Type);
+            (msg.Content as MultipartFormDataContent).Add(content, "file", fileInfo.Name);
+            var response = await HttpClient.SendAsync(msg);
+            if (response.IsSuccessStatusCode)
+            {
+                FileId = Convert.ToInt32(await response.Content.ReadAsStringAsync());
+                await FileIdChanged.InvokeAsync(FileId);
+                fileReference = null;
+                fileInfo = null;
+            }
+        }
+    }
+}*@

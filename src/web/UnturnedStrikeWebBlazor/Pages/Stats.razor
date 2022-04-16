@@ -1,0 +1,77 @@
+﻿@page "/stats"
+
+    <div class="dropdown mb-2">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+            @CurrentPeriodString
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="javascript:void(0)" @onclick="() => ChangePeriodAsync(EStatisticsPeriod.Last30Days)">30 days</a>
+            <a class="dropdown-item" href="javascript:void(0)" @onclick="() => ChangePeriodAsync(EStatisticsPeriod.Last7Days)">7 days</a>
+            <a class="dropdown-item" href="javascript:void(0)" @onclick="() => ChangePeriodAsync(EStatisticsPeriod.Today)">Today</a>
+            <a class="dropdown-item" href="javascript:void(0)" @onclick="() => ChangePeriodAsync(EStatisticsPeriod.Overall)">Overall</a>
+        </div>
+    </div>
+    <div class="mb-5">
+        <button class="btn btn-secondary m-1" @onclick="() => ChangeCategoryAsync(EStatisticsCategory.TotalKills)">Top Killers</button>
+        <button class="btn btn-secondary m-1" @onclick="() => ChangeCategoryAsync(EStatisticsCategory.GamesWon)">Top Winners</button>
+        <button class="btn btn-secondary m-1" @onclick="() => ChangeCategoryAsync(EStatisticsCategory.TotalBombsDefused)">Top Bomb Defuses</button>
+        <button class="btn btn-secondary m-1" @onclick="() => ChangeCategoryAsync(EStatisticsCategory.TotalBombsPlanted)">Top Bomb Plants</button>
+        <button class="btn btn-secondary m-1" @onclick="() => ChangeCategoryAsync(EStatisticsCategory.TotalHostagesRescued)">Top Hostage Rescues</button>
+    </div>
+
+@if (Players != null)
+{
+    <div class="d-flex justify-content-center text-center">
+        @if (Players.Count > 1)
+        {
+            <div>
+                <img src="@GetPlayerSteamIconUrl(1)" width="110" height="110" class="rounded-circle" />
+                <h5>
+                    #2 <a class="text-white" href="/profiles/@GetPlayerId(1)">@GetPlayerSteamName(1)</a>
+                    <img class="ml-2" src="/img/flags/24x24/@(GetPlayerCountry(1)).png" />
+                </h5>
+                <span>@GetPlayerBest(1)</span>
+            </div>
+        }
+        @if (Players.Count > 0)
+        {
+            <div>
+                <img src="@GetPlayerSteamIconUrl(0)" width="140" height="140" class="rounded-circle" />
+                <h5>
+                    #1 <a class="text-white" href="/profiles/@GetPlayerId(0)">@GetPlayerSteamName(0)</a>
+                    <img class="ml-2" src="/img/flags/32x32/@(GetPlayerCountry(0)).png" />
+                </h5>
+                <span>@GetPlayerBest(0)</span>
+            </div>
+        } else
+        {
+            <h3>No Players</h3>
+        }
+
+        @if (Players.Count > 2)
+        {
+            <div>
+                <img src="@GetPlayerSteamIconUrl(2)" width="80" height="80" class="rounded-circle" />
+                <h5>
+                    #3 <a class="text-white" href="/profiles/@GetPlayerId(2)">@GetPlayerSteamName(2)</a>
+                    <img class="ml-2" src="/img/flags/24x24/@(GetPlayerCountry(2)).png" />
+                </h5>
+                <span>@GetPlayerBest(2)</span>
+            </div>
+        }
+        
+    </div>
+    
+    <table class="mt-4 table table-bordered table-dark">
+        <tbody>
+            @for (int i = 3; i < Players.Count(); i++)
+            {
+                <tr>
+                    <th scope="row">#@(i + 1)</th>
+                    <td><img src="/img/flags/16x16/@(Players[i].Country?.ToLower() ?? "unkown").png" /> <a class="text-white" href="/profiles/@Players[i].Id">@Players[i].SteamName</a></td>
+                    <td>@Players[i].Statistic.GetPlayerBest(CurrentCategory)</td>
+                </tr>
+            }
+        </tbody>        
+    </table>
+}

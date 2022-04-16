@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[GameSummaries]
+(
+	Id INT IDENTITY(1, 1) NOT NULL CONSTRAINT PK_GameSummaries PRIMARY KEY,
+	ServerGroup VARCHAR(10) NOT NULL,
+	Map VARCHAR(55) NOT NULL,
+	GameType VARCHAR(55) NOT NULL,
+	TerroristScore TINYINT NOT NULL CONSTRAINT DF_GameSummaries_TerroristScore DEFAULT 0,
+	CounterTerroristScore TINYINT NOT NULL CONSTRAINT DF_GameSummaries_CounterTerroristScore DEFAULT 0,
+	WinType VARCHAR(55) NULL,
+	IsWinnerTerrorist BIT NOT NULL CONSTRAINT DF_GameSummaries_IsWinnerTerrorist DEFAULT 0,
+	IsFinished AS CAST(CASE WHEN FinishDate IS NULL THEN 0 ELSE 1 END AS BIT) PERSISTED,
+	StartDate DATETIME2(0) NOT NULL CONSTRAINT DF_GameSummaries_StartDate DEFAULT GETUTCDATE(),
+	FinishDate DATETIME2(0) NULL
+)

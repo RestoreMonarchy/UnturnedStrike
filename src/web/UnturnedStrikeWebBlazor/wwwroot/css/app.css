@@ -1,0 +1,124 @@
+﻿html, body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url("/img/background.jpg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+.title {
+    background-color: #424242;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+select {
+    background-color: #424242 !important;
+}
+
+.navbar-profile-icon {
+    margin-top: -14px;
+    margin-bottom: -10px;
+    height: 28px !important;
+    width: 28px !important;
+}
+
+.navbar-profile-name {
+    font-size: 15px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+/* Boxes */
+
+.box {
+
+}
+
+.box-img {
+    background-color: rgb(45, 45, 45) !important;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.box-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.box-price:hover span {
+    display: none !important;
+}
+
+.box-price:hover:before {
+    content: "Open Now!" !important;
+}
+
+
+/* Weapons */
+
+.weapon {
+    position: relative !important;
+}
+
+.weapon-img {
+    background-color: rgb(45, 45, 45) !important;
+}
+
+.weapon-img-preview {
+    background-color: rgb(45, 45, 45) !important;
+    width: 100%;
+}
+
+.weapon-title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.icon {
+    max-height: 64px !important;
+    text-align: center;
+    padding: 0 0 0 0;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

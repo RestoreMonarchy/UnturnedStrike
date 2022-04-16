@@ -1,0 +1,29 @@
+﻿@page "/weaponswiki"
+
+@if (Weapons != null)
+{
+    <div class="mb-4">
+        @foreach (var category in WeaponCategories)
+        {
+            if (category.Count() > 0)
+            {
+                <div class="mt-2">
+                    <h3 class="title">@category.Key</h3>            
+                    <div class="row justify-content-center">
+                        @foreach (var weapon in category)
+                        {
+                            <div class="weapon m-2">
+                                <a href="javascript:void(0)" @onclick="() => PreviewWeapon(weapon)">
+                                    <img class="weapon-img" src="@weapon.ImageUrl" width="150" height="150" />
+                                </a>
+                                <span class="weapon-title">@weapon.Name</span>
+                            </div>
+                        }
+                    </div>
+                </div>                
+            }
+        }
+    </div>    
+}
+
+<WeaponPreviewModal @ref="WeaponPreviewModal" />

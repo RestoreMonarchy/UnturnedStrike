@@ -1,0 +1,135 @@
+﻿<div class="modal fade" id="@nameof(WeaponModal)" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Text Weapon</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <EditForm Model="ModelWeapon" OnValidSubmit="SubmitAsync">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Item ID</label>
+                        <InputNumber @bind-Value="ModelWeapon.ItemId" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <InputText @bind-Value="ModelWeapon.Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <InputTextArea @bind-Value="ModelWeapon.Description" class="form-control" rows="3" />
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        @*<InputFile @bind-FileId="ModelWeapon.ImageFileId" Accept="image/jpeg,image/png" />
+                        @if (ModelWeapon.ImageFileId != default)
+                        {
+                            <img src="api/files/@ModelWeapon.ImageFileId" style="max-height: 128px;" />
+                        }*@
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <InputSelect @bind-Value="ModelWeapon.Category" class="custom-select">
+                            <option value="Rifles">Rifles</option>
+                            <option value="Pistols">Pistols</option>
+                            <option value="SMGs">SMGs</option>
+                            <option value="Heavy">Heavy</option>
+                            <option value="Grenades">Grenades</option>
+                            <option value="Extras">Extras</option>
+                        </InputSelect>
+                    </div>
+                    <div class="form-group">
+                        <label>Team</label>
+                        <InputSelect @bind-Value="ModelWeapon.Team" class="custom-select">
+                            <option value="Both">Both</option>
+                            <option value="Terrorists">Terrorists</option>
+                            <option value="CounterTerrorists">Counter Terrorists</option>
+                        </InputSelect>
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <InputNumber @bind-Value="ModelWeapon.Price" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Kill Reward Multiplier</label>
+                        <InputNumber @bind-Value="ModelWeapon.KillRewardMultiplier" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Magazine ID</label>
+                        <InputNumber @bind-Value="ModelWeapon.MagazineId" class="form-control" />
+                    </div>
+                    @if (ModelWeapon.MagazineId != null)
+                    {
+                        <div class="form-group">
+                            <label>Magazine Amount</label>
+                            <InputNumber @bind-Value="ModelWeapon.MagazineAmount" class="form-control" />
+                        </div>
+                    }
+
+                    <div class="form-group">
+                        <label>Icon Unicode</label>
+                        <InputText @bind-Value="ModelWeapon.IconUnicode" class="form-control" />
+                    </div>
+
+                    <div class="form-group form-check">
+                        <InputCheckbox @bind-Value="ModelWeapon.IsEnabled" class="form-check-input" />
+                        <label class="form-check-label">Enabled</label>
+                    </div>
+
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">@Text</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Inject]
+    private IJSRuntime JSRuntime { get; set; }
+
+    [Parameter]
+    public EventCallback<Weapon> OnWeaponCreated { get; set; }
+
+    [Parameter]
+    public EventCallback<Weapon> OnWeaponUpdated { get; set; }
+
+
+    private bool isUpdate;
+
+    private string Text => isUpdate ? $"Update #{ModelWeapon.Id}" : "Create";
+
+    private Weapon ModelWeapon { get; set; } = new Weapon();
+
+    public async Task CreateWeaponAsync()
+    {
+        ModelWeapon = new Weapon() { Team = "Both", KillRewardMultiplier = 1, Category = "Rifles", IsEnabled = true };
+        isUpdate = false;
+        await JSRuntime.ShowModalStaticAsync(nameof(WeaponModal));
+    }
+
+    public async Task UpdateWeaponAsync(Weapon weapon)
+    {
+        ModelWeapon = weapon;
+        isUpdate = true;
+        await JSRuntime.ShowModalStaticAsync(nameof(WeaponModal));
+    }
+
+    private async Task SubmitAsync()
+    {
+        if (!isUpdate)
+            await OnWeaponCreated.InvokeAsync(ModelWeapon);
+        else
+            await OnWeaponUpdated.InvokeAsync(ModelWeapon);
+
+        await JSRuntime.HideModalAsync(nameof(WeaponModal));
+    }
+}

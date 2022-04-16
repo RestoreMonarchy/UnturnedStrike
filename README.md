@@ -20,7 +20,7 @@ This repo contains all source code files of the game mode and website projects
 Thanks to everyone who helped in development, promoting and management of UnturnedStrike.
 
 **Special thanks to:**  
-Astatine, Mikey, Rushed, XGOAO, Ferret, Ivan Plotnikov, Sable Plays, Steelze, Molecule31, NoduS, Danuvian, Estofado, Greg, Greenorine, Danaby2 for help in development and management
+Astatine, Mikey, Rushed, XGOAO, Ferret, Ivan Plotnikov, Sable Plays, educatalan02, Steelze, Molecule31, NoduS, Danuvian, Estofado, Greg, Greenorine, Danaby2 for help in development and management
 
 LiamDoesGame, P9nda, noclick, Retu, MTN, Tridentgames, Crist4n Pex for helping to promote the game
 

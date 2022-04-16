@@ -1,3 +1,3 @@
 ### Server Files
-These are some files from my old servers.  
-You can use them to easier and faster set up your Unturned Strike server.
+These are some files of my old UnturnedStrike.com server.  
+They are not required, but feel free to use them!

@@ -1,0 +1,236 @@
+[
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -47.51126,
+      "Y": 90.95833,
+      "Z": -34.36421
+    },
+    "Rotation": 354.8
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -52.7355728,
+      "Y": 90.95833,
+      "Z": -34.948082
+    },
+    "Rotation": 11.9999914
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -54.3143768,
+      "Y": 90.95833,
+      "Z": -38.9435349
+    },
+    "Rotation": 11.9999914
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -49.31007,
+      "Y": 90.95833,
+      "Z": -41.3557625
+    },
+    "Rotation": 358.199982
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -54.1411247,
+      "Y": 90.95833,
+      "Z": -43.8217735
+    },
+    "Rotation": 30.9999962
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -52.1181068,
+      "Y": 90.95833,
+      "Z": -47.9430771
+    },
+    "Rotation": 25.99999
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -48.9636154,
+      "Y": 90.95833,
+      "Z": -48.20585
+    },
+    "Rotation": 351.5
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -46.756237,
+      "Y": 90.95833,
+      "Z": -45.60562
+    },
+    "Rotation": 354.0
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -42.92278,
+      "Y": 90.95833,
+      "Z": -44.6133575
+    },
+    "Rotation": 349.900024
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -43.0344925,
+      "Y": 90.95833,
+      "Z": -40.59306
+    },
+    "Rotation": 290.800018
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -39.36345,
+      "Y": 90.95833,
+      "Z": -40.0573273
+    },
+    "Rotation": 145.800034
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -38.9344,
+      "Y": 90.95833,
+      "Z": -43.4354362
+    },
+    "Rotation": 100.700005
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -35.6848831,
+      "Y": 90.95833,
+      "Z": -48.8505859
+    },
+    "Rotation": 54.29991
+  },
+  {
+    "Type": "CounterTerrorist",
+    "Position": {
+      "X": -32.1086922,
+      "Y": 90.95833,
+      "Z": -44.20533
+    },
+    "Rotation": 135.1999
+  },
+  {
+    "Type": "Lobby",
+    "Position": {
+      "X": -9.984009,
+      "Y": 4.18902874,
+      "Z": 8.657764
+    },
+    "Rotation": 88.79999
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 36.36372,
+      "Y": 96.50145,
+      "Z": 36.12345
+    },
+    "Rotation": 262.500061
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 33.79908,
+      "Y": 96.50145,
+      "Z": 37.03252
+    },
+    "Rotation": 262.500061
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 35.4220963,
+      "Y": 96.50145,
+      "Z": 34.09178
+    },
+    "Rotation": 260.000061
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 32.7563744,
+      "Y": 96.50145,
+      "Z": 34.1239243
+    },
+    "Rotation": 282.900055
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 30.6495342,
+      "Y": 96.50145,
+      "Z": 33.7939529
+    },
+    "Rotation": 321.600067
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 29.5981731,
+      "Y": 96.50145,
+      "Z": 30.6248112
+    },
+    "Rotation": 261.600067
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 31.9486847,
+      "Y": 96.50145,
+      "Z": 30.9719028
+    },
+    "Rotation": 267.9001
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 35.09371,
+      "Y": 96.50145,
+      "Z": 31.0830383
+    },
+    "Rotation": 258.2001
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 35.4660568,
+      "Y": 96.50145,
+      "Z": 27.7872
+    },
+    "Rotation": 275.7001
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 32.40132,
+      "Y": 96.50145,
+      "Z": 27.8787518
+    },
+    "Rotation": 275.7001
+  },
+  {
+    "Type": "Terrorist",
+    "Position": {
+      "X": 29.6430283,
+      "Y": 96.50145,
+      "Z": 28.1540718
+    },
+    "Rotation": 275.7001
+  }
+]

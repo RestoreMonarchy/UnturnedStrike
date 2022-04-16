@@ -1,0 +1,234 @@
+[
+  {
+    "Team": "Terrorist",
+    "WeaponID": 1,
+    "Clothes": [
+      {
+        "ItemId": 50001,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50002,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50003,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50004,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50005,
+        "Armor": 0.75
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Overkill",
+        "Level": 7
+      },
+      {
+        "Name": "Sharpshooter",
+        "Level": 0
+      },
+      {
+        "Name": "Dexterity",
+        "Level": 5
+      },
+      {
+        "Name": "Cardio",
+        "Level": 5
+      },
+      {
+        "Name": "Exercise",
+        "Level": 0
+      },
+      {
+        "Name": "Diving",
+        "Level": 5
+      },
+      {
+        "Name": "Parkour",
+        "Level": 1
+      },
+      {
+        "Name": "Sneakybeaky",
+        "Level": 0
+      },
+      {
+        "Name": "Vitality",
+        "Level": 5
+      },
+      {
+        "Name": "Immunity",
+        "Level": 5
+      },
+      {
+        "Name": "Toughness",
+        "Level": 5
+      },
+      {
+        "Name": "Strength",
+        "Level": 5
+      },
+      {
+        "Name": "Warmblooded",
+        "Level": 5
+      },
+      {
+        "Name": "Survival",
+        "Level": 5
+      },
+      {
+        "Name": "Healing",
+        "Level": 0
+      },
+      {
+        "Name": "Crafting",
+        "Level": 3
+      },
+      {
+        "Name": "Outdoors",
+        "Level": 5
+      },
+      {
+        "Name": "Cooking",
+        "Level": 3
+      },
+      {
+        "Name": "Fishing",
+        "Level": 5
+      },
+      {
+        "Name": "Agriculture",
+        "Level": 7
+      },
+      {
+        "Name": "Mechanic",
+        "Level": 5
+      },
+      {
+        "Name": "Engineer",
+        "Level": 3
+      }
+    ]
+  },
+  {
+    "Team": "CounterTerrorist",
+    "WeaponID": 2,
+    "Clothes": [
+      {
+        "ItemId": 50006,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50007,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50008,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50009,
+        "Armor": 0.75
+      },
+      {
+        "ItemId": 50010,
+        "Armor": 0.75
+      }
+    ],
+    "Skills": [
+      {
+        "Name": "Overkill",
+        "Level": 7
+      },
+      {
+        "Name": "Sharpshooter",
+        "Level": 0
+      },
+      {
+        "Name": "Dexterity",
+        "Level": 5
+      },
+      {
+        "Name": "Cardio",
+        "Level": 5
+      },
+      {
+        "Name": "Exercise",
+        "Level": 0
+      },
+      {
+        "Name": "Diving",
+        "Level": 5
+      },
+      {
+        "Name": "Parkour",
+        "Level": 1
+      },
+      {
+        "Name": "Sneakybeaky",
+        "Level": 0
+      },
+      {
+        "Name": "Vitality",
+        "Level": 5
+      },
+      {
+        "Name": "Immunity",
+        "Level": 5
+      },
+      {
+        "Name": "Toughness",
+        "Level": 5
+      },
+      {
+        "Name": "Strength",
+        "Level": 5
+      },
+      {
+        "Name": "Warmblooded",
+        "Level": 5
+      },
+      {
+        "Name": "Survival",
+        "Level": 5
+      },
+      {
+        "Name": "Healing",
+        "Level": 0
+      },
+      {
+        "Name": "Crafting",
+        "Level": 3
+      },
+      {
+        "Name": "Outdoors",
+        "Level": 5
+      },
+      {
+        "Name": "Cooking",
+        "Level": 3
+      },
+      {
+        "Name": "Fishing",
+        "Level": 5
+      },
+      {
+        "Name": "Agriculture",
+        "Level": 7
+      },
+      {
+        "Name": "Mechanic",
+        "Level": 5
+      },
+      {
+        "Name": "Engineer",
+        "Level": 3
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RocketPermissions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DefaultGroup>default</DefaultGroup>
+  <Groups>
+    <Group>
+      <Id>default</Id>
+      <DisplayName>Guest</DisplayName>
+      <Prefix />
+      <Suffix />
+      <Color>white</Color>
+      <Members />
+      <Priority>100</Priority>
+      <Permissions>
+        <Permission Cooldown="0">stats</Permission>
+        <Permission Cooldown="0">changeteam</Permission>
+        <Permission Cooldown="0">team</Permission>
+        <Permission Cooldown="0">join</Permission>
+        <Permission Cooldown="0">teams</Permission>
+        <Permission Cooldown="0">buy</Permission>
+        <Permission Cooldown="0">b</Permission>
+      </Permissions>
+    </Group>
+  </Groups>
+</RocketPermissions>

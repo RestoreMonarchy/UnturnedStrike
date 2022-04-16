@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KillFeedConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <KillEffectId>23425</KillEffectId>
+  <MaxNameLength>10</MaxNameLength>
+  <ShowDuration>5</ShowDuration>
+  <BombUnicode>E031</BombUnicode>
+  <HeadshotUnicode>E0AA</HeadshotUnicode>
+  <VehicleExplosionUnicode>E0A7</VehicleExplosionUnicode>
+  <VehicleRoadKillUnicode>E0A8</VehicleRoadKillUnicode>
+  <PunchKillUnicode>E0A1</PunchKillUnicode>
+  <WeaponUnicodes>
+    <WeaponUnicode WeaponId="254" Unicode="E02C" />
+    <WeaponUnicode WeaponId="346" Unicode="E071" />
+    <WeaponUnicode WeaponId="109" Unicode="E072" />
+    <WeaponUnicode WeaponId="101" Unicode="E073" />
+    <WeaponUnicode WeaponId="484" Unicode="E074" />
+    <WeaponUnicode WeaponId="1143" Unicode="E075" />
+    <WeaponUnicode WeaponId="380" Unicode="E076" />
+    <WeaponUnicode WeaponId="1436" Unicode="E077" />
+    <WeaponUnicode WeaponId="1041" Unicode="E078" />
+    <WeaponUnicode WeaponId="1165" Unicode="E079" />
+    <WeaponUnicode WeaponId="490" Unicode="E07A" />
+    <WeaponUnicode WeaponId="1475" Unicode="E07B" />
+    <WeaponUnicode WeaponId="1037" Unicode="E07C" />
+    <WeaponUnicode WeaponId="1039" Unicode="E07D" />
+    <WeaponUnicode WeaponId="107" Unicode="E07E" />
+    <WeaponUnicode WeaponId="1027" Unicode="E07F" />
+    <WeaponUnicode WeaponId="1024" Unicode="E080" />
+    <WeaponUnicode WeaponId="1021" Unicode="E081" />
+    <WeaponUnicode WeaponId="1018" Unicode="E082" />
+    <WeaponUnicode WeaponId="112" Unicode="E083" />
+    <WeaponUnicode WeaponId="116" Unicode="E084" />
+    <WeaponUnicode WeaponId="122" Unicode="E085" />
+    <WeaponUnicode WeaponId="126" Unicode="E086" />
+    <WeaponUnicode WeaponId="129" Unicode="E087" />
+    <WeaponUnicode WeaponId="132" Unicode="E088" />
+    <WeaponUnicode WeaponId="1337" Unicode="E089" />
+    <WeaponUnicode WeaponId="1360" Unicode="E08A" />
+    <WeaponUnicode WeaponId="1362" Unicode="E08B" />
+    <WeaponUnicode WeaponId="1364" Unicode="E08C" />
+    <WeaponUnicode WeaponId="1447" Unicode="E08D" />
+    <WeaponUnicode WeaponId="1379" Unicode="E08E" />
+    <WeaponUnicode WeaponId="1377" Unicode="E08F" />
+    <WeaponUnicode WeaponId="1375" Unicode="E090" />
+    <WeaponUnicode WeaponId="1244" Unicode="E091" />
+    <WeaponUnicode WeaponId="1372" Unicode="E091" />
+    <WeaponUnicode WeaponId="1373" Unicode="E091" />
+    <WeaponUnicode WeaponId="1369" Unicode="E092" />
+    <WeaponUnicode WeaponId="1366" Unicode="E093" />
+    <WeaponUnicode WeaponId="1476" Unicode="E094" />
+    <WeaponUnicode WeaponId="1477" Unicode="E095" />
+    <WeaponUnicode WeaponId="1480" Unicode="E096" />
+    <WeaponUnicode WeaponId="1481" Unicode="E097" />
+    <WeaponUnicode WeaponId="1484" Unicode="E098" />
+    <WeaponUnicode WeaponId="1488" Unicode="E099" />
+    <WeaponUnicode WeaponId="18" Unicode="E09A" />
+    <WeaponUnicode WeaponId="363" Unicode="E09B" />
+    <WeaponUnicode WeaponId="4" Unicode="E09C" />
+    <WeaponUnicode WeaponId="474" Unicode="E09E" />
+    <WeaponUnicode WeaponId="479" Unicode="E09E" />
+    <WeaponUnicode WeaponId="480" Unicode="E09E" />
+    <WeaponUnicode WeaponId="519" Unicode="E09F" />
+    <WeaponUnicode WeaponId="1441" Unicode="E0A2" />
+    <WeaponUnicode WeaponId="1382" Unicode="E0A4" />
+    <WeaponUnicode WeaponId="297" Unicode="E0A4" />
+    <WeaponUnicode WeaponId="300" Unicode="E0A5" />
+    <WeaponUnicode WeaponId="488" Unicode="E001" />
+    <WeaponUnicode WeaponId="18707" Unicode="E004" />
+    <WeaponUnicode WeaponId="18717" Unicode="E013" />
+    <WeaponUnicode WeaponId="18701" Unicode="E03F" />
+    <WeaponUnicode WeaponId="18703" Unicode="E001" />
+    <WeaponUnicode WeaponId="18705" Unicode="E003" />
+    <WeaponUnicode WeaponId="18709" Unicode="E020" />
+    <WeaponUnicode WeaponId="18711" Unicode="E013" />
+    <WeaponUnicode WeaponId="18713" Unicode="E040" />
+    <WeaponUnicode WeaponId="18715" Unicode="E01E" />
+    <WeaponUnicode WeaponId="18721" Unicode="E007" />
+    <WeaponUnicode WeaponId="18723" Unicode="E009" />
+    <WeaponUnicode WeaponId="18725" Unicode="E008" />
+    <WeaponUnicode WeaponId="18727" Unicode="E00A" />
+    <WeaponUnicode WeaponId="18729" Unicode="E00B" />
+    <WeaponUnicode WeaponId="18731" Unicode="E00D" />
+    <WeaponUnicode WeaponId="18733" Unicode="E010" />
+    <WeaponUnicode WeaponId="18735" Unicode="E00E" />
+    <WeaponUnicode WeaponId="18737" Unicode="E026" />
+    <WeaponUnicode WeaponId="18739" Unicode="E027" />
+    <WeaponUnicode WeaponId="18741" Unicode="E028" />
+    <WeaponUnicode WeaponId="18751" Unicode="E011" />
+    <WeaponUnicode WeaponId="18753" Unicode="E021" />
+    <WeaponUnicode WeaponId="18755" Unicode="E021" />
+    <WeaponUnicode WeaponId="18757" Unicode="E022" />
+    <WeaponUnicode WeaponId="18759" Unicode="E024" />
+    <WeaponUnicode WeaponId="18761" Unicode="E01A" />
+    <WeaponUnicode WeaponId="18763" Unicode="E018" />
+    <WeaponUnicode WeaponId="18771" Unicode="E03C" />
+    <WeaponUnicode WeaponId="18773" Unicode="E01B" />
+    <WeaponUnicode WeaponId="18775" Unicode="E023" />
+    <WeaponUnicode WeaponId="18777" Unicode="E01D" />
+    <WeaponUnicode WeaponId="18779" Unicode="E019" />
+    <WeaponUnicode WeaponId="254" Unicode="E02C" />
+    <WeaponUnicode WeaponId="1346" Unicode="E02B" />
+  </WeaponUnicodes>
+</KillFeedConfiguration>

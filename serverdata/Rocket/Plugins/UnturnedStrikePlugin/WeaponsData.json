@@ -1,0 +1,818 @@
+[
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18707,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18708,
+        "Amount": 5
+      }
+    ],
+    "Id": 1,
+    "Name": "Glock 18",
+    "Price": 200,
+    "Category": "Pistols",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18717,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18718,
+        "Amount": 5
+      }
+    ],
+    "Id": 2,
+    "Name": "USP-S",
+    "Price": 200,
+    "Category": "Pistols",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18701,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18702,
+        "Amount": 5
+      }
+    ],
+    "Id": 53,
+    "Name": "CZ75-Auto",
+    "Price": 500,
+    "Category": "Extras",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18703,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18704,
+        "Amount": 5
+      }
+    ],
+    "Id": 54,
+    "Name": "Desert Eagle",
+    "Price": 700,
+    "Category": "Pistols",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18705,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18706,
+        "Amount": 5
+      }
+    ],
+    "Id": 55,
+    "Name": "Five-Seven",
+    "Price": 500,
+    "Category": "Pistols",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18709,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18710,
+        "Amount": 5
+      }
+    ],
+    "Id": 56,
+    "Name": "P250",
+    "Price": 300,
+    "Category": "Pistols",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18711,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18712,
+        "Amount": 5
+      }
+    ],
+    "Id": 57,
+    "Name": "P2000",
+    "Price": 200,
+    "Category": "Extras",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18713,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18714,
+        "Amount": 5
+      }
+    ],
+    "Id": 58,
+    "Name": "R8 Revolver",
+    "Price": 600,
+    "Category": "Extras",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18715,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18716,
+        "Amount": 5
+      }
+    ],
+    "Id": 59,
+    "Name": "Tec-9",
+    "Price": 500,
+    "Category": "Pistols",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18721,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18722,
+        "Amount": 5
+      }
+    ],
+    "Id": 60,
+    "Name": "AK-47",
+    "Price": 2700,
+    "Category": "Rifles",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18723,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18724,
+        "Amount": 5
+      }
+    ],
+    "Id": 61,
+    "Name": "AWP",
+    "Price": 4750,
+    "Category": "Rifles",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18725,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18726,
+        "Amount": 5
+      }
+    ],
+    "Id": 62,
+    "Name": "AUG",
+    "Price": 3300,
+    "Category": "Rifles",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18727,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18728,
+        "Amount": 5
+      }
+    ],
+    "Id": 63,
+    "Name": "Famas",
+    "Price": 2250,
+    "Category": "Rifles",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18729,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18730,
+        "Amount": 5
+      }
+    ],
+    "Id": 64,
+    "Name": "G3SG1",
+    "Price": 5000,
+    "Category": "Rifles",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18731,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18732,
+        "Amount": 5
+      }
+    ],
+    "Id": 65,
+    "Name": "Galil AR",
+    "Price": 1800,
+    "Category": "Rifles",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18733,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18734,
+        "Amount": 5
+      }
+    ],
+    "Id": 66,
+    "Name": "M4A1-S",
+    "Price": 2900,
+    "Category": "Extras",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18735,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18736,
+        "Amount": 5
+      }
+    ],
+    "Id": 67,
+    "Name": "M4A4",
+    "Price": 3100,
+    "Category": "Rifles",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18737,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18738,
+        "Amount": 5
+      }
+    ],
+    "Id": 68,
+    "Name": "Scar-20",
+    "Price": 5000,
+    "Category": "Rifles",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18739,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18740,
+        "Amount": 5
+      }
+    ],
+    "Id": 69,
+    "Name": "SG553",
+    "Price": 3000,
+    "Category": "Rifles",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18741,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18742,
+        "Amount": 5
+      }
+    ],
+    "Id": 70,
+    "Name": "SSG08",
+    "Price": 1700,
+    "Category": "Rifles",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18751,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18752,
+        "Amount": 5
+      }
+    ],
+    "Id": 71,
+    "Name": "MAC-10",
+    "Price": 1050,
+    "Category": "SMGs",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18753,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18754,
+        "Amount": 5
+      }
+    ],
+    "Id": 72,
+    "Name": "MP5-SD",
+    "Price": 1500,
+    "Category": "Extras",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18755,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18756,
+        "Amount": 5
+      }
+    ],
+    "Id": 73,
+    "Name": "MP7",
+    "Price": 1500,
+    "Category": "SMGs",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18757,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18758,
+        "Amount": 5
+      }
+    ],
+    "Id": 74,
+    "Name": "MP9",
+    "Price": 1250,
+    "Category": "SMGs",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18759,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18760,
+        "Amount": 5
+      }
+    ],
+    "Id": 75,
+    "Name": "P90",
+    "Price": 2350,
+    "Category": "SMGs",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18761,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18762,
+        "Amount": 5
+      }
+    ],
+    "Id": 76,
+    "Name": "PP-Bizon",
+    "Price": 1400,
+    "Category": "SMGs",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18763,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18764,
+        "Amount": 5
+      }
+    ],
+    "Id": 77,
+    "Name": "UMP-45",
+    "Price": 1200,
+    "Category": "SMGs",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18771,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18772,
+        "Amount": 5
+      }
+    ],
+    "Id": 78,
+    "Name": "M249",
+    "Price": 5200,
+    "Category": "Heavy",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18773,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18774,
+        "Amount": 5
+      }
+    ],
+    "Id": 79,
+    "Name": "MAG-7",
+    "Price": 1800,
+    "Category": "Heavy",
+    "Team": "CounterTerrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18775,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18776,
+        "Amount": 5
+      }
+    ],
+    "Id": 80,
+    "Name": "Nova",
+    "Price": 1050,
+    "Category": "Heavy",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18777,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18778,
+        "Amount": 5
+      }
+    ],
+    "Id": 81,
+    "Name": "Sawed-Off",
+    "Price": 1100,
+    "Category": "Heavy",
+    "Team": "Terrorists"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 18779,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 18780,
+        "Amount": 5
+      }
+    ],
+    "Id": 82,
+    "Name": "XM1014",
+    "Price": 2000,
+    "Category": "Heavy",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 254,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 0,
+        "Amount": 0
+      }
+    ],
+    "Id": 83,
+    "Name": "Fragmention Grenade",
+    "Price": 300,
+    "Category": "Grenades",
+    "Team": "Both"
+  },
+  {
+    "KillRewardMultiplier": 1.0,
+    "Weapon": {
+      "SightId": 0,
+      "TacticalId": 0,
+      "GripId": 0,
+      "BarrelId": 0,
+      "MagazineId": 0,
+      "Ammo": 0,
+      "ItemId": 1346,
+      "Amount": 0
+    },
+    "Items": [
+      {
+        "ItemId": 0,
+        "Amount": 0
+      }
+    ],
+    "Id": 84,
+    "Name": "Flashbang",
+    "Price": 200,
+    "Category": "Grenades",
+    "Team": "Both"
+  }
+]

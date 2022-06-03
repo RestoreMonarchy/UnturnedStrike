@@ -7,7 +7,6 @@ using UnturnedStrike.Plugin.Components;
 using UnturnedStrike.Plugin.Helpers;
 using UnturnedStrike.Plugin.Models;
 using UnturnedStrike.Plugin.Services;
-using Logger = Rocket.Core.Logging.Logger;
 
 namespace UnturnedStrike.Plugin.Patches
 {
@@ -16,8 +15,7 @@ namespace UnturnedStrike.Plugin.Patches
     {
         [HarmonyPatch("dropBarricade")]
         [HarmonyPrefix]
-        static bool dropBarricadePrefix(out TerroristPlayer __state, Vector3 point, float angle_x, float angle_y, float angle_z,
-            ref ulong owner, ref ulong group)
+        static bool dropBarricadePrefix(out TerroristPlayer __state, Vector3 point, ref ulong owner, ref ulong group)
         {
             __state = null;
 

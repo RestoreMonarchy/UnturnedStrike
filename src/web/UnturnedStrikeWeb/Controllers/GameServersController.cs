@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnturnedStrikeAPI;
+using UnturnedStrikeWeb.Services;
 
 namespace UnturnedStrikeWeb.Controllers
 {
@@ -9,17 +11,18 @@ namespace UnturnedStrikeWeb.Controllers
     [Route("api/[controller]")]
     public class GameServersController : ControllerBase
     {
-        private readonly IMemoryCache memoryCache;
+        private readonly ServersStatusService serversStatusService;
 
-        public GameServersController(IMemoryCache memoryCache)
+        public GameServersController(ServersStatusService serversStatusService)
         {
-            this.memoryCache = memoryCache;
+            this.serversStatusService = serversStatusService;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(memoryCache.Get<IEnumerable<GameServer>>("Servers"));
+            IEnumerable<GameServer> gameServers = await serversStatusService.GetGameServersFromCacheAsync();
+            return Ok(gameServers);
         }
     }
 }

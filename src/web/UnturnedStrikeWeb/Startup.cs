@@ -64,7 +64,7 @@ namespace UnturnedStrikeWeb
             services.AddTransient<ITransactionsService, TransactionsService>();
             services.AddTransient<IPurchasesService, PurchasesService>();
 
-            services.AddHostedService<ServersStatusService>();
+            services.AddTransient<ServersStatusService>();
 
             services.AddSameSiteCookiePolicy();
 

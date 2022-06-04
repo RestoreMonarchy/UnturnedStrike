@@ -20,7 +20,7 @@
             @foreach (var server in GameServers.Where(x => x.IsOnline))
             {
                 <tr>
-                    <td>@server.Name</td>
+                    <td>@server.Info.Name</td>
                     <td>@server.Info.Map</td>
                     <td>@server.Info.Players/@server.Info.MaxPlayers</td>
                     <td class="d-none d-lg-block">@server.Address:@server.Port</td>

@@ -1,17 +1,15 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using SteamQueryNet;
+using SteamServerQuery;
 using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using UnturnedStrikeAPI;
 using UnturnedStrikeDatabaseProvider.Repositories;
 
 namespace UnturnedStrikeWeb.Services
 {
-    public class ServersStatusService : IHostedService
+    public class ServersStatusService
     {
         private readonly IMemoryCache memoryCache;
         private readonly IGameServersRepository gameServersRepository;
@@ -24,68 +22,38 @@ namespace UnturnedStrikeWeb.Services
             this.logger = logger;
         }
 
-        private CancellationTokenSource cancellationTokenSource;
-
-        public Task StartAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<GameServer>> GetGameServersFromCacheAsync()
         {
-            cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-            Task.Run(() => PeriodicRefreshAsync(), cancellationTokenSource.Token);
-            return Task.CompletedTask;
-        }
-
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            cancellationTokenSource.Cancel();
-            return Task.CompletedTask;
-        }
-
-        private async Task PeriodicRefreshAsync()
-        {
-            while (true)
+            return await memoryCache.GetOrCreateAsync("Servers", entry => 
             {
-                try
-                {
-                    await RefreshAsync();
-                }
-                catch (Exception e)
-                {
-                    logger.LogError(e, "");
-                }
-
-                await Task.Delay(12000, cancellationTokenSource.Token);
-            }
+                entry.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10);
+                return GetGameServersAsync();
+            });
         }
 
-        public async Task RefreshAsync()
+        public async Task<IEnumerable<GameServer>> GetGameServersAsync()
         {
-            var servers = await gameServersRepository.GetServersAsync();
-            foreach (var server in servers)
+            IEnumerable<GameServer> gameServers = await gameServersRepository.GetServersAsync();
+
+            foreach (GameServer gameServer in gameServers)
             {
-                var query = new ServerQuery
-                {
-                    ReceiveTimeout = 500,
-                    SendTimeout = 500
-                };
-
-                try
-                {
-                    query.Connect(server.Address, (ushort)(server.Port + 1));
-                    var info = await query.GetServerInfoAsync();
-                    server.Info = new GameServerInfo()
-                    {
-                        Name = info.Name,
-                        Players = info.Players,
-                        MaxPlayers = info.MaxPlayers,
-                        Map = info.Map
-                    };
-                }
-                catch (TimeoutException)
-                {
-
-                }
+                gameServer.Info = await GetServerInfoAsync(gameServer.Address, gameServer.Port);
             }
 
-            memoryCache.Set("Servers", servers);
+            return gameServers;
+        }
+
+        private async Task<GameServerInfo> GetServerInfoAsync(string address, int port)
+        {
+            ServerInfo info = await SteamServer.QueryServerAsync(address, port, 1000);
+
+            return new GameServerInfo()
+            {
+                Name = info.Name,
+                Players = (byte)info.Players,
+                MaxPlayers = (byte)info.MaxPlayers,
+                Map = info.Map
+            };
         }
     }
 }

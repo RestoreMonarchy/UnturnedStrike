@@ -190,7 +190,10 @@ namespace UnturnedStrike.Plugin
             { "MVPHostageRescued", "MVP: {0} for rescuing a hostage!" },
             { "WarmupTitle", "WARMUP {0}" },
             { "WaitingForPlayersTitle", "WAITING FOR PLAYERS..." },
-            { "BombPlantedTime", "" }
+            { "BombPlantedTime", "" },
+            { "RemoveHostageInvalid", "The specified hostage ID is not valid" },
+            { "RemoveHostageSuccess", "Successfully removed hostage with ID {0}!" },
+            { "RemoveHostageFail", "Failed to find any hostage with ID {0}" }
         };
     }
 }

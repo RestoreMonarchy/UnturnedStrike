@@ -45,5 +45,15 @@ namespace UnturnedStrike.Plugin.Providers
             hostages.Add(hostage);
             HostagesDataStorage.Save(hostages);
         }
+
+        public bool RemoveHostage(int hostageId)
+        {
+            int count = hostages.RemoveAll(x => x.Id == hostageId);
+            if (count == 0)
+                return false;
+
+            HostagesDataStorage.Save(hostages);
+            return true;
+        }
     }
 }

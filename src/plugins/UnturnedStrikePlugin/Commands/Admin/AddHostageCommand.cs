@@ -26,22 +26,23 @@ namespace UnturnedStrike.Plugin.Commands.Admin
             if (!BarricadeUtility.RaycastBarricade(player.Player, out Transform transform) 
                 || transform.name != pluginInstance.Configuration.Instance.HostageBarricadeId.ToString())
             {
-                Logger.LogWarning($"Transform name: {transform?.name ?? "NULL"}");
                 UnturnedChat.Say(caller, pluginInstance.Translate("AddHostageFail"));
                 return;
             }
 
-            var eulerAngles = transform.localRotation.eulerAngles;
-            var hostage = new Hostage()
+            Vector3 eulerAngles = transform.eulerAngles;
+            
+            Hostage hostage = new Hostage()
             {
                 Position = new ConvertableVector3(transform.position),
                 Angles = new ConvertableVector3()
                 {
-                    X = MeasurementTool.angleToByte(Mathf.RoundToInt(eulerAngles.x / 2f) * 2),
-                    Y = MeasurementTool.angleToByte(Mathf.RoundToInt(eulerAngles.y / 2f) * 2),
-                    Z = MeasurementTool.angleToByte(Mathf.RoundToInt(eulerAngles.z / 2f) * 2)
+                    X = eulerAngles.x,
+                    Y = eulerAngles.y,
+                    Z = eulerAngles.z
                 }
             };
+
             pluginInstance.HostagesProvider.AddHostage(hostage);
             UnturnedChat.Say(caller, pluginInstance.Translate("AddHostageSuccessfull", hostage.Id));
         }

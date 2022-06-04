@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using UnturnedStrike.Plugin.Models;
 
 namespace UnturnedStrike.Plugin.Providers
@@ -12,5 +8,6 @@ namespace UnturnedStrike.Plugin.Providers
         IEnumerable<Hostage> Hostages { get; }
         void ReloadHostages();
         void AddHostage(Hostage hostage);
+        bool RemoveHostage(int hostageId);
     }
 }

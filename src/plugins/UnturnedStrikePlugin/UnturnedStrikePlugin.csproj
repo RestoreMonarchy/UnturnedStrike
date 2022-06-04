@@ -88,6 +88,9 @@
     <Compile Include="Bombsite\BombComponent.cs" />
     <Compile Include="Commands\Admin\AddHostageCommand.cs" />
     <Compile Include="Commands\Admin\AddWeaponCommand.cs" />
+    <Compile Include="Commands\Debug\DropHostageCommand.cs" />
+    <Compile Include="Commands\Admin\RemoveHostageCommand.cs" />
+    <Compile Include="Commands\Debug\SpawnHostagesCommand.cs" />
     <Compile Include="Commands\Player\BuyCommand.cs" />
     <Compile Include="Commands\Player\ChangeTeamCommand.cs" />
     <Compile Include="Commands\Other\ClearInventoryCommand.cs" />

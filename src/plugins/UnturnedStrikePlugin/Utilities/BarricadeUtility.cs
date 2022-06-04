@@ -39,6 +39,7 @@ namespace UnturnedStrike.Plugin.Utilities
             ItemBarricadeAsset asset = Assets.find(EAssetType.ITEM, barricadeId) as ItemBarricadeAsset; 
             Barricade barricade = new Barricade(asset);
             Quaternion rotation = Quaternion.Euler(angles);
+
             Transform transform = BarricadeManager.dropNonPlantedBarricade(
                 barricade, 
                 position,

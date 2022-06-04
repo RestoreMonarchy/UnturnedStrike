@@ -110,9 +110,8 @@ namespace UnturnedStrike.Plugin.Services
             player.NativePlayer.clothing.ForceRemoveBackpack();
             HostageRescuers.Remove(player);
 
-            var rot = new Vector3(135, 135, 0);
+            var rot = player.transform.eulerAngles;
             var pos = player.transform.position;
-            pos.y = RegionsHelper.GetRegionHeight(pos);
 
             return DropHostage(pos, rot);
         }

@@ -23,11 +23,11 @@
                     </div>
                     <div class="form-group">
                         <label>Image</label>
-                        @*<InputFile @bind-FileId="ModelWeapon.ImageFileId" Accept="image/jpeg,image/png" />
+                        <InputImageFile @bind-FileId="ModelWeapon.ImageFileId" Accept=".png" />
                         @if (ModelWeapon.ImageFileId != default)
                         {
                             <img src="api/files/@ModelWeapon.ImageFileId" style="max-height: 128px;" />
-                        }*@
+                        }
                     </div>
                     <div class="form-group">
                         <label>Category</label>

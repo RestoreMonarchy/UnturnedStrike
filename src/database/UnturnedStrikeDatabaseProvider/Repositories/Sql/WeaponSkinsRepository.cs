@@ -71,7 +71,7 @@ namespace UnturnedStrikeDatabaseProvider.Repositories.Sql
         public async Task<WeaponSkin> GetWeaponSkinAsync(int weaponSkinId)
         {
             const string sql = "SELECT ws.*, w.* FROM dbo.WeaponSkins ws JOIN dbo.Weapons w ON w.Id = ws.WeaponId " +
-                "WHERE ws.Id = weaponSkinId;";
+                "WHERE ws.Id = @weaponSkinId;";
             return (await connection.QueryAsync<WeaponSkin, Weapon, WeaponSkin>(sql, (ws, w) => 
             {
                 ws.Weapon = w;

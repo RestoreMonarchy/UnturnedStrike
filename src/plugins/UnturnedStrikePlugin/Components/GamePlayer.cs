@@ -111,7 +111,7 @@ namespace UnturnedStrike.Plugin.Components
         {
             if (NativePlayer.clothing.isVisual)
             {
-                NativePlayer.clothing.sendVisualToggle(EVisualToggleType.COSMETIC);
+                NativePlayer.clothing.ServerSetVisualToggleState(EVisualToggleType.COSMETIC, false);
             }
         }
 
@@ -119,7 +119,7 @@ namespace UnturnedStrike.Plugin.Components
         {
             if (!NativePlayer.clothing.isVisual)
             {
-                NativePlayer.clothing.sendVisualToggle(EVisualToggleType.COSMETIC);
+                NativePlayer.clothing.ServerSetVisualToggleState(EVisualToggleType.COSMETIC, true);
             }
         }
 

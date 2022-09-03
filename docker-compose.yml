@@ -1,0 +1,34 @@
+version: '3'
+services:
+  mssql-server:
+    user: root
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Password!123"
+      MSSQL_PID: "Express"
+      TZ: Europe/Warsaw
+    volumes:
+      - /srv/${PROJECT_NAME}/data/mssql-server:/var/opt/mssql/data
+      - /srv/${PROJECT_NAME}/backups/mssql-server:/var/sqlbackups
+  database:
+    build:  
+      context: .
+      dockerfile: ./docker/database/Dockerfile
+      args:
+        CONNECTION_STRING: "Server=mssql-server;Database=UnturnedStrike;Uid=sa;Password=Password!123"
+    depends_on:
+      - mssql-server
+  web:     
+    build:
+        context: .
+        dockerfile: ./docker/web/Dockerfile
+    depends_on:
+      database:
+        condition: service_completed_successfully
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      TZ: Europe/Warsaw
+    volumes:
+      - /srv/${PROJECT_NAME}/configs/serverconfig.json:/app/appsettings.Production.json
+      - /srv/${PROJECT_NAME}/configs/clientconfig.json:/app/wwwroot/appsettings.json

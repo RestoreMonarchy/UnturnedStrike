@@ -1,0 +1,26 @@
+GUID 2facf74c8e6d41ad970a9051c1a909f0
+Type Throwable
+Rarity Rare
+Useable Throwable
+ID 13521
+
+Size_X 1
+Size_Y 1
+Size_Z 0.375
+
+
+Player_Damage 0
+Zombie_Damage 0
+Animal_Damage 0
+Resource_Damage 0
+Object_Damage 0
+
+Range 0
+
+Explosive
+
+
+
+Fuse_Length 25
+
+

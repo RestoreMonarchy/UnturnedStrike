@@ -1,0 +1,66 @@
+ManifestFileVersion: 0
+CRC: 895335065
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0760584aee2a4242ecb46a80f5c1cd21
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f59781c5bf85466691505bb198b3f9bd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 134
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UnturnedStrikeBomb/Effects/C4_Beep/Effect.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Beep/BombBeep.mp3
+- Assets/UnturnedStrikeBomb/Effects/C4_Defused/Fire.mp3
+- Assets/UnturnedStrikeBomb/Items/C4/Barricade.prefab
+- Assets/UnturnedStrikeBomb/Items/C4/Animations.prefab
+- Assets/UnturnedStrikeBomb/Items/C4/Model_Source.fbx
+- Assets/UnturnedStrikeBomb/Effects/C4_Planted/Effect.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Defused/Effect.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Explosion/Fire.mp3
+- Assets/UnturnedStrikeBomb/Items/C4/Texture.png
+- Assets/UnturnedStrikeBomb/Items/C4/Animation_Source.fbx
+- Assets/UnturnedStrikeBomb/Effects/C4_Explosion/Smoke.png
+- Assets/UnturnedStrikeBomb/Items/C4/Clip.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Explosion/Smoke.mat
+- Assets/UnturnedStrikeBomb/Items/C4/Item.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Explosion/Effect.prefab
+- Assets/UnturnedStrikeBomb/Effects/C4_Planted/Fire.mp3
+- Assets/UnturnedStrikeBomb/Items/C4/Texture.mat
+Dependencies: []

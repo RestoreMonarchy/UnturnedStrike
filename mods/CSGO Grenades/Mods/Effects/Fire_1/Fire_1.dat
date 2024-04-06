@@ -1,0 +1,17 @@
+GUID 3e3f109974c24bf49a3121d52d7622da
+Type Effect
+ID 13528
+
+Lifetime 6
+
+Splatter 1
+Splatters 32
+Splatter_Liquid
+Splatter_Temperature Burning
+Splatter_Lifetime 6
+Splatter_Lifetime_Spread 0
+Splatter_Range 23
+
+Spawn_Explosion_On_Dedicated_Server
+
+

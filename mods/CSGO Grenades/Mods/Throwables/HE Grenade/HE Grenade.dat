@@ -1,0 +1,26 @@
+GUID 61d78f44211849c693ce031f010d7934
+Type Throwable
+Rarity Rare
+Useable Throwable
+ID 13523
+
+Size_X 1
+Size_Y 1
+Size_Z 0.375
+
+
+Player_Damage 120
+Zombie_Damage 120
+Animal_Damage 120
+Resource_Damage 120
+Object_Damage 120
+
+Range 10
+
+Explosive
+
+Explosion 13527
+
+Fuse_Length 3
+
+

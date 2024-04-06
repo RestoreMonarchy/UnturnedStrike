@@ -1,0 +1,29 @@
+GUID 1aafe8c80b834ceda0883701af2bb94b
+Type Magazine
+Rarity Uncommon
+ID 18708
+
+Size_X 1
+Size_Y 1
+Size_Z 0.2
+
+Amount 20
+Count_Min 20
+Count_Max 20
+
+Calibers 1
+Caliber_0 10012
+
+Tracer 48
+
+Blueprints 2
+Blueprint_0_Type Ammo
+Blueprint_0_Supplies 1
+Blueprint_0_Supply_0_ID 44
+Blueprint_0_Build 30
+Blueprint_1_Type Ammo
+Blueprint_1_Supplies 1
+Blueprint_1_Supply_0_ID 18708
+Blueprint_1_Build 30
+
+Asset_Bundle_Version 3

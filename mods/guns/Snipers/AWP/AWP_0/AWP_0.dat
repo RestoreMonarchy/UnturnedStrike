@@ -1,0 +1,101 @@
+GUID 9de50dad3da042a1a0d56bbe312fd9a3
+Type Gun
+Rarity Common
+Useable Gun
+Slot Primary
+ID 18723
+
+Size_X 5
+Size_Y 2
+Size_Z 0.5
+Size2_Z 5
+
+Magazine 18724
+Sight 18691
+
+Hook_Sight
+Hook_Tactical
+
+Ammo_Min 1
+Ammo_Max 10
+
+Safety
+Semi
+
+Caliber 10066
+
+Range 600
+Firerate 50
+Action Bolt
+
+Player_Damage 150
+Player_Leg_Multiplier 0.65
+Player_Arm_Multiplier 1
+Player_Spine_Multiplier 1.2
+Player_Skull_Multiplier 3
+Instakill_Headshots True
+
+Zombie_Damage 200
+Zombie_Leg_Multiplier 0.65
+Zombie_Arm_Multiplier 1
+Zombie_Spine_Multiplier 1.2
+Zombie_Skull_Multiplier 1.1
+
+Animal_Damage 135
+Animal_Leg_Multiplier 0.6
+Animal_Spine_Multiplier 0.8
+Animal_Skull_Multiplier 1.1
+
+Barricade_Damage 45
+Structure_Damage 45
+Vehicle_Damage 75
+Resource_Damage 40
+Object_Damage 100
+
+Invulnerable
+
+Durability 1
+Wear 3
+
+Spread_Aim 0.001
+Spread_Hip 0.35
+
+Ballistic_Steps 48
+Ballistic_Travel 25
+
+Recoil_Aim 0.25
+Recoil_Min_X -4
+Recoil_Min_Y 25
+Recoil_Max_X -5
+Recoil_Max_Y 30
+
+Recover_X 0.25
+Recover_Y 0.25
+
+Shake_Min_X -0.005
+Shake_Min_Y 0.005
+Shake_Min_Z -0.05
+Shake_Max_X 0.005
+Shake_Max_Y -0.005
+Shake_Max_Z -0.1
+
+Muzzle 4
+
+Blueprints 2
+Blueprint_0_Type Repair
+Blueprint_0_Supplies 1
+Blueprint_0_Supply_0_ID 67
+Blueprint_0_Supply_0_Amount 6
+Blueprint_0_Tool 76
+Blueprint_0_Level 2
+Blueprint_0_Skill Repair
+Blueprint_0_Build 27
+Blueprint_1_Type Tool
+Blueprint_1_Supplies 1
+Blueprint_1_Supply_0_ID 18723
+Blueprint_1_Product 67
+Blueprint_1_Products 4
+Blueprint_1_Build 27
+
+Asset_Bundle_Version 3
+

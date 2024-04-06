@@ -1,0 +1,268 @@
+ManifestFileVersion: 0
+CRC: 770773770
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 64133d09a52ea3d968585989dee6e6fa
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 76799144b8db9526fb5fe68a25a0804e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 59
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Guns/Pistols/CZ/CZ_0/Hammer.mp3
+- Assets/Guns/Snipers/Scar20/Scar20_0/Reload.mp3
+- Assets/Guns/Rifles/Famas/Famas_0/Hammer.wav
+- Assets/Guns/Pistols/CZ/CZ_0/Item.prefab
+- Assets/Guns/Rifles/SG553/SG553_0/Animations.prefab
+- Assets/Guns/Rifles/SG553/SG553_0/Shoot.mp3
+- Assets/Guns/Shotguns/Nova_0/Animations.prefab
+- Assets/Guns/SMG's/Bizon/Bizon_Mag_0/Item.prefab
+- Assets/Guns/Rifles/M4A4/M4A4_0/Shoot.mp3
+- Assets/Guns/Pistols/Deagle/Deagle_0/Shoot.mp3
+- Assets/Guns/Pistols/USP/USP_0/Shoot.mp3
+- Assets/Guns/SMG's/MP7/MP7_Mag_0/Item.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_Scope_0/Item.prefab
+- Assets/Guns/Rifles/AUG/AUG_Scope_0/Item.prefab
+- Assets/Guns/Rifles/Galil/Galil_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/Mac10/Mac10_0/Reload.wav
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_0/Item.prefab
+- Assets/Guns/Snipers/AWP/AWP_0/Item.prefab
+- Assets/Guns/Shotguns/Shotgun_Shells_1/Item.prefab
+- Assets/Guns/Snipers/SSG08/SSG08_0/Reload.wav
+- Assets/Guns/Rifles/Famas/Famas_0/Reload.mp3
+- Assets/Guns/Snipers/SSG08/SSG08_0/Hammer.wav
+- Assets/Guns/Rifles/SG553/SG553_Scope_0/Sight.prefab
+- Assets/Guns/SMG's/P90/P90_0/Item.prefab
+- Assets/Guns/Rifles/AUG/AUG_0/Shoot.mp3
+- Assets/Guns/Snipers/G3SG1/G3SG1_0/Animations.prefab
+- Assets/Guns/Pistols/Deagle/Deagle_0/Animations.prefab
+- Assets/Guns/Rifles/SG553/SG553_0/Reload.wav
+- Assets/Guns/Rifles/M4A4/M4A4_0/Item.prefab
+- Assets/Guns/Rifles/AK/AK47_0/Shoot.mp3
+- Assets/Guns/Shotguns/Sawed_Off_0/Item.prefab
+- Assets/Guns/Rifles/AK/AK47_0/Item.prefab
+- Assets/Guns/Pistols/Tec/Tec_0/Animations.prefab
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_0/Shoot.mp3
+- Assets/Guns/SMG's/MP9/MP9_mag_0/Item.prefab
+- Assets/Guns/Pistols/Deagle/Deagle_Mag_0/Magazine.prefab
+- Assets/Guns/Shotguns/Sawed_Off_0/Reload.mp3
+- Assets/Guns/Snipers/Scar20/Scar20_0/Shoot.mp3
+- Assets/Guns/Shotguns/XM_0/Reload.mp3
+- Assets/Guns/SMG's/MP5SD/MP5SD_0/Item.prefab
+- Assets/Guns/Shotguns/Mag7/Mag7_0/Reload.wav
+- Assets/Guns/SMG's/MP9/MP9_0/Animations.prefab
+- Assets/Guns/SMG's/UMP/UMP_0/Shoot.mp3
+- Assets/Guns/Rifles/AK/AK47_Mag_0/Magazine.prefab
+- Assets/Guns/Snipers/AWP/AWP_Scope_0/Sight.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_0/Reload.mp3
+- Assets/Guns/Snipers/Scar20/Scar20_Mag_0/Item.prefab
+- Assets/Guns/Pistols/USP/USP_0/Item.prefab
+- Assets/Guns/Rifles/Galil/Galil_0/Animations.prefab
+- Assets/Guns/SMG's/MP9/MP9_mag_0/Magazine.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_Scope_0/Sight.prefab
+- Assets/Guns/Pistols/Tec/Tec_0/Reload.mp3
+- Assets/Guns/Rifles/M4A1-S/M4A1_0/Reload.mp3
+- Assets/Guns/Pistols/Glock/Glock_0/Animations.prefab
+- Assets/Guns/LMG's/M249/M249_0/Hammer.wav
+- Assets/Guns/Pistols/CZ/CZ_Mag_0/Item.prefab
+- Assets/Guns/Pistols/USP/USP_0/Hammer.mp3
+- Assets/Guns/Rifles/AUG/AUG_0/Item.prefab
+- Assets/Guns/Shotguns/Sawed_Off_0/Shoot.mp3
+- Assets/Guns/Snipers/AWP/AWP_0/Animations.prefab
+- Assets/Guns/Pistols/P250/P250_0/Item.prefab
+- Assets/Guns/Pistols/CZ/CZ_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/M4A4/M4A4_Mag_0/Item.prefab
+- Assets/Guns/Shotguns/Sawed_Off_0/Hammer.wav
+- Assets/Guns/Pistols/USP/USP_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/AK/AK47_Mag_0/Item.prefab
+- Assets/Guns/Pistols/Tec/Tec_Mag_0/Magazine.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_Mag_0/Item.prefab
+- Assets/Guns/SMG's/UMP/UMP_Mag_0/Item.prefab
+- Assets/Guns/Pistols/Glock/Glock_0/Reload.mp3
+- Assets/Guns/SMG's/MP5SD/MP5SD_0/Shoot.mp3
+- Assets/Guns/Rifles/M4A4/M4A4_0/Animations.prefab
+- Assets/Guns/Snipers/AWP/AWP_0/Shoot.mp3
+- Assets/Guns/Rifles/SG553/SG553_0/Item.prefab
+- Assets/Guns/SMG's/UMP/UMP_0/Hammer.wav
+- Assets/Guns/Pistols/Deagle/Deagle_0/Reload.mp3
+- Assets/Guns/Pistols/Glock/Glock_Mag_0/Magazine.prefab
+- Assets/Guns/Pistols/Deagle/Deagle_0/Hammer.wav
+- Assets/Guns/Rifles/M4A4/M4A4_0/Reload.mp3
+- Assets/Guns/Snipers/SSG08/SSG08_Mag_0/Item.prefab
+- Assets/Guns/LMG's/M249/M249_0/Reload.mp3
+- Assets/Guns/SMG's/MP5SD/MP5SD_0/Animations.prefab
+- Assets/Guns/Shotguns/Mag7/Mag7_0/Animations.prefab
+- Assets/Guns/SMG's/Mac10/Mac10_0/Hammer.mp3
+- Assets/Guns/Snipers/G3SG1/G3SG1_0/Item.prefab
+- Assets/Guns/SMG's/MP5SD/MP5SD_0/Reload.wav
+- Assets/Guns/Pistols/USP/USP_Mag_0/Item.prefab
+- Assets/Guns/Shotguns/Nova_0/Reload.wav
+- Assets/Guns/Rifles/Famas/Famas_Mag_0/Magazine.prefab
+- Assets/Guns/Snipers/AWP/AWP_Scope_0/Item.prefab
+- Assets/Guns/Rifles/AUG/AUG_Scope_0/Sight.prefab
+- Assets/Guns/Pistols/Deagle/Deagle_0/Item.prefab
+- Assets/Guns/Snipers/AWP/AWP_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/MP5SD/MP5SD_Mag_0/Item.prefab
+- Assets/Guns/SMG's/MP7/MP7_0/Hammer.wav
+- Assets/Guns/Pistols/Tec/Tec_0/Hammer.mp3
+- Assets/Guns/SMG's/P90/P90_0/Hammer.mp3
+- Assets/Guns/SMG's/Bizon/Bizon_0/Animations.prefab
+- Assets/Guns/SMG's/Mac10/Mac10_mag_0/Magazine.prefab
+- Assets/Guns/SMG's/Bizon/Bizon_0/Item.prefab
+- Assets/Guns/Rifles/SG553/SG553_Mag_0/Item.prefab
+- Assets/Guns/Rifles/M4A4/M4A4_0/Hammer.mp3
+- Assets/Guns/Rifles/M4A1-S/M4A1_0/Item.prefab
+- Assets/Guns/Rifles/M4A1-S/M4A1_0/Animations.prefab
+- Assets/Guns/Shotguns/Mag7/Mag7_0/Hammer.mp3
+- Assets/Guns/Shotguns/XM_0/Item.prefab
+- Assets/Guns/Shotguns/Nova_0/Hammer.mp3
+- Assets/Guns/Shotguns/Mag7/Mag7_0/Item.prefab
+- Assets/Guns/Rifles/Galil/Galil_0/Item.prefab
+- Assets/Guns/Pistols/Deagle/Deagle_Mag_0/Item.prefab
+- Assets/Guns/Rifles/Famas/Famas_0/Shoot.mp3
+- Assets/Guns/Pistols/Tec/Tec_0/Shoot.mp3
+- Assets/Guns/SMG's/MP5SD/MP5SD_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/P90/P90_0/Reload.mp3
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/UMP/UMP_0/Item.prefab
+- Assets/Guns/SMG's/Bizon/Bizon_0/Hammer.mp3
+- Assets/Guns/Rifles/AK/AK47_0/Reload.mp3
+- Assets/Guns/SMG's/MP9/MP9_0/Shoot.mp3
+- Assets/Guns/SMG's/MP9/MP9_0/Item.prefab
+- Assets/Guns/LMG's/M249/M249_0/Animations.prefab
+- Assets/Guns/SMG's/Mac10/Mac10_mag_0/Item.prefab
+- Assets/Guns/Pistols/CZ/CZ_0/Reload.mp3
+- Assets/Guns/Pistols/Glock/Glock_0/Hammer.mp3
+- Assets/Guns/SMG's/Bizon/Bizon_0/Reload.mp3
+- Assets/Guns/Pistols/P250/P250_0/Shoot.mp3
+- Assets/Guns/SMG's/Mac10/Mac10_0/Item.prefab
+- Assets/Guns/Snipers/Scar20/Scar20_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/Famas/Famas_Mag_0/Item.prefab
+- Assets/Guns/Pistols/CZ/CZ_0/Animations.prefab
+- Assets/Guns/Pistols/Tec/Tec_0/Item.prefab
+- Assets/Guns/SMG's/Mac10/Mac10_0/Animations.prefab
+- Assets/Guns/Rifles/Galil/Galil_0/Reload.mp3
+- Assets/Guns/SMG's/P90/P90_0/Animations.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_0/Shoot.mp3
+- Assets/Guns/SMG's/MP7/MP7_0/Reload.mp3
+- Assets/Guns/SMG's/MP7/MP7_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/P90/P90_Mag_0/Magazine.prefab
+- Assets/Guns/Pistols/USP/USP_0/Reload.mp3
+- Assets/Guns/LMG's/M249/M249_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/M4A1-S/M4A1_Mag_0/Magazine.prefab
+- Assets/Guns/Shotguns/Mag7/Mag7_Mag_0/Item.prefab
+- Assets/Guns/Snipers/AWP/AWP_0/Hammer.wav
+- Assets/Guns/Rifles/Galil/Galil_Mag_0/Item.prefab
+- Assets/Guns/Shotguns/XM_0/Animations.prefab
+- Assets/Guns/Pistols/Glock/Glock_0/Shoot.mp3
+- Assets/Guns/SMG's/MP5SD/MP5SD_0/Hammer.wav
+- Assets/Guns/Pistols/P250/P250_Mag_0/Item.prefab
+- Assets/Guns/Snipers/SSG08/SSG08_Scope_0/Sight.prefab
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_0/Hammer.mp3
+- Assets/Guns/Shotguns/XM_0/Shoot.mp3
+- Assets/Guns/Pistols/Glock/Glock_Mag_0/Item.prefab
+- Assets/Guns/Pistols/P250/P250_0/Hammer.mp3
+- Assets/Guns/Rifles/AUG/AUG_0/Hammer.wav
+- Assets/Guns/SMG's/Mac10/Mac10_0/Shoot.mp3
+- Assets/Guns/Rifles/AUG/AUG_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/Famas/Famas_0/Item.prefab
+- Assets/Guns/Shotguns/Shotgun_Shells_0/Item.prefab
+- Assets/Guns/Snipers/SSG08/SSG08_0/Animations.prefab
+- Assets/Guns/Snipers/G3SG1/G3SG1_0/Hammer.wav
+- Assets/Guns/Shotguns/Mag7/Mag7_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/M4A1-S/M4A1_0/Shoot.mp3
+- Assets/Guns/LMG's/M249/M249_0/Shoot.mp3
+- Assets/Guns/Rifles/AUG/AUG_0/Animations.prefab
+- Assets/Guns/Pistols/P250/P250_0/Animations.prefab
+- Assets/Guns/Rifles/M4A1-S/M4A1_0/Hammer.mp3
+- Assets/Guns/Shotguns/Nova_0/Item.prefab
+- Assets/Guns/Pistols/P250/P250_Mag_0/Magazine.prefab
+- Assets/Guns/LMG's/M249/M249_Mag_0/Item.prefab
+- Assets/Guns/SMG's/Bizon/Bizon_0/Shoot.mp3
+- Assets/Guns/Rifles/SG553/SG553_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/Bizon/Bizon_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/UMP/UMP_0/Reload.mp3
+- Assets/Guns/Snipers/G3SG1/G3SG1_Mag_0/Magazine.prefab
+- Assets/Guns/Snipers/Scar20/Scar20_Scope_0/Sight.prefab
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_0/Animations.prefab
+- Assets/Guns/SMG's/MP7/MP7_0/Shoot.mp3
+- Assets/Guns/SMG's/MP9/MP9_0/Reload.mp3
+- Assets/Guns/Rifles/AK/AK47_0/Hammer.mp3
+- Assets/Guns/Snipers/AWP/AWP_0/Reload.mp3
+- Assets/Guns/Snipers/SSG08/SSG08_0/Shoot.mp3
+- Assets/Guns/Snipers/Scar20/Scar20_Scope_0/Item.prefab
+- Assets/Guns/Snipers/AWP/AWP_Mag_0/Item.prefab
+- Assets/Guns/Snipers/SSG08/SSG08_0/Item.prefab
+- Assets/Guns/Rifles/AUG/AUG_Mag_0/Item.prefab
+- Assets/Guns/Rifles/Galil/Galil_0/Hammer.wav
+- Assets/Guns/Rifles/Famas/Famas_0/Animations.prefab
+- Assets/Guns/SMG's/UMP/UMP_Mag_0/Magazine.prefab
+- Assets/Guns/Rifles/SG553/SG553_Scope_0/Item.prefab
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_Mag_0/Item.prefab
+- Assets/Guns/Snipers/Scar20/Scar20_0/Item.prefab
+- Assets/Guns/Rifles/SG553/SG553_0/Hammer.wav
+- Assets/Guns/Shotguns/Sawed_Off_0/Animations.prefab
+- Assets/Guns/Rifles/M4A4/M4A4_Mag_0/Magazine.prefab
+- Assets/Guns/Pistols/Tec/Tec_Mag_0/Item.prefab
+- Assets/Guns/SMG's/UMP/UMP_0/Animations.prefab
+- Assets/Guns/Pistols/CZ/CZ_0/Shoot.mp3
+- Assets/Guns/Rifles/AK/AK47_0/Animations.prefab
+- Assets/Guns/Pistols/Five_Seven/Five_Seven_0/Reload.mp3
+- Assets/Guns/Snipers/Scar20/Scar20_0/Animations.prefab
+- Assets/Guns/SMG's/MP7/MP7_0/Item.prefab
+- Assets/Guns/Rifles/AUG/AUG_0/Reload.wav
+- Assets/Guns/Snipers/SSG08/SSG08_Scope_0/Item.prefab
+- Assets/Guns/Shotguns/Mag7/Mag7_0/Shoot.mp3
+- Assets/Guns/Rifles/Galil/Galil_0/Shoot.mp3
+- Assets/Guns/Snipers/SSG08/SSG08_Mag_0/Magazine.prefab
+- Assets/Guns/SMG's/P90/P90_Mag_0/Item.prefab
+- Assets/Guns/LMG's/M249/M249_0/Item.prefab
+- Assets/Guns/Pistols/P250/P250_0/Reload.mp3
+- Assets/Guns/Shotguns/XM_0/Hammer.mp3
+- Assets/Guns/SMG's/MP9/MP9_0/Hammer.wav
+- Assets/Guns/SMG's/MP7/MP7_0/Animations.prefab
+- Assets/Guns/Pistols/USP/USP_0/Animations.prefab
+- Assets/Guns/Pistols/Glock/Glock_0/Item.prefab
+- Assets/Guns/Shotguns/Shotgun_Shells_0/Magazine.prefab
+- Assets/Guns/Shotguns/Nova_0/Shoot.mp3
+- Assets/Guns/Rifles/M4A1-S/M4A1_Mag_0/Item.prefab
+- Assets/Guns/Snipers/Scar20/Scar20_0/Hammer.wav
+- Assets/Guns/SMG's/P90/P90_0/Shoot.mp3
+- Assets/Guns/Shotguns/Shotgun_Shells_1/Magazine.prefab
+Dependencies: []

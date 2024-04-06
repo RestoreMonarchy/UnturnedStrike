@@ -1,0 +1,85 @@
+ManifestFileVersion: 0
+CRC: 409806353
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e72ed824295b00dc3e543de07f6b9031
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8b96540d033a32a732ba34f40aa801cb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UnturnedStrikeUIs/Sounds/RoundTick/Ticking.wav
+- Assets/UnturnedStrikeUIs/Sounds/CTWinSlayer/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/extra/SupportHeader.png
+- Assets/UnturnedStrikeUIs/UIs/TeamsUI/extra/TeamB_Button.png
+- Assets/UnturnedStrikeUIs/UIs/BalanceUI/extra/MainImage.png
+- Assets/UnturnedStrikeUIs/UIs/GameWinUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/BalanceUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/WeaponBuy/Fire.mp3
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/extra/MainHeader.png
+- Assets/UnturnedStrikeUIs/UIs/LeaderboardUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/RoundsUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/LobbyUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/WeaponBuy/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/HostagesComingOut/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/TWinSlayer/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/WarmupUI/extra/WarmupBg.png
+- Assets/UnturnedStrikeUIs/UIs/TeamsUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/HostagesComingOut/HostagesComingOut.mp3
+- Assets/UnturnedStrikeUIs/Sounds/RoundTick/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/Sounds/CTWinSlayer/CTWin.wav
+- Assets/UnturnedStrikeUIs/UIs/MVPUI/Effect.prefab
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/extra/Category.png
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/extra/Close.png
+- Assets/UnturnedStrikeUIs/UIs/RoundsUI/extra/MainImage.png
+- Assets/UnturnedStrikeUIs/UIs/TeamsUI/extra/Lobby_Button.png
+- Assets/UnturnedStrikeUIs/UIs/BuyMenuUI/extra/Item.png
+- Assets/UnturnedStrikeUIs/UIs/MVPUI/extra/MainImage.png
+- Assets/UnturnedStrikeUIs/UIs/TeamsUI/extra/TeamA_Button.png
+- Assets/UnturnedStrikeUIs/Sounds/TWinSlayer/TWin.wav
+- Assets/UnturnedStrikeUIs/UIs/WarmupUI/Effect.prefab
+Dependencies: []

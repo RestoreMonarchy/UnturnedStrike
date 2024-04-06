@@ -1,0 +1,26 @@
+GUID ad3a805f464448cfbc086a233e3eb496
+Type Throwable
+Rarity Rare
+Useable Throwable
+ID 13524
+
+Size_X 1
+Size_Y 1
+Size_Z 0.375
+
+
+Player_Damage 0
+Zombie_Damage 0
+Animal_Damage 0
+Resource_Damage 0
+Object_Damage 0
+
+Range 0
+
+Explosive
+
+
+
+Fuse_Length 25
+
+

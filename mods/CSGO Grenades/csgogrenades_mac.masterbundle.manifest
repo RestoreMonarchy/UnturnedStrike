@@ -1,0 +1,119 @@
+ManifestFileVersion: 0
+CRC: 4130915523
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8c8f85850cc46f4215e82ce876a26fe2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6a15374227fd43882894600157804d4f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a50e6f74b1392e047aeec7ce2547320d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Grenades/Mods/Throwables/Decoy Grenade/Throwable.prefab
+- Assets/Grenades/Mods/Throwables/Incendiary Grenade/Equip.mp3
+- Assets/Grenades/Mods/Throwables/Molotov/Use.wav
+- Assets/Grenades/Mods/Effects/Fire_1/Effect.prefab
+- Assets/Grenades/Mods/Throwables/Flashbang/Use.mp3
+- Assets/Grenades/Mods/Gren.wav
+- Assets/Grenades/Mods/Throwables/Decoy Grenade/Animations.prefab
+- Assets/Grenades/Mods/Throwables/Molotov/Item.prefab
+- Assets/Grenades/Mods/Throwables/Molotov/Animations.prefab
+- Assets/Grenades/Mat/Materials/23.mat
+- Assets/Grenades/Mat/Dick.fbx
+- Assets/Grenades/Mods/Throwables/HE Grenade/Use.mp3
+- Assets/Grenades/Mods/Effects/Explosion_1/Effect.prefab
+- Assets/Grenades/Mat/Texture.png
+- Assets/Grenades/Mods/Effects/Fire_3/Splatter_0.prefab
+- Assets/Grenades/Mods/Effects/Fire_3/Effect.prefab
+- Assets/Grenades/Mods/Effects/Fire_2/Effect.prefab
+- Assets/Grenades/Mods/Throwables/Incendiary Grenade/Throwable.prefab
+- Assets/Grenades/Mods/Throwables/Smoke Grenade/Animations.prefab
+- Assets/Grenades/Mods/Throwables/Flashbang/Animations.prefab
+- Assets/Grenades/Mods/Throwables/Molotov/Throwable.prefab
+- Assets/Grenades/Mat/Molot.fbx
+- Assets/Grenades/Mods/Throwables/Smoke Grenade/Use.mp3
+- Assets/Grenades/Mods/Lozh.mp3
+- Assets/Grenades/Mods/Throwables/HE Grenade/Throwable.prefab
+- Assets/Grenades/Mods/Throwables/Decoy Grenade/Use.mp3
+- Assets/Grenades/Mat/Smoke.fbx
+- Assets/Grenades/Mat/Animation.fbx
+- Assets/Grenades/Mat/Fire.fbx
+- Assets/Grenades/Mat/Materials/New Material.mat
+- Assets/Grenades/Mods/Effects/Fire_2/Splatter_0.prefab
+- Assets/Grenades/Mods/Throwables/Smoke Grenade/Equip.mp3
+- Assets/Grenades/Mods/Throwables/Smoke Grenade/Item.prefab
+- "Assets/Grenades/Mods/\u0412\u0437\u0440\u044B\u0432 \u041C\u043E\u043B\u043E\u0442\u043E\u0432.mp3"
+- Assets/Grenades/Mods/Flash.wav
+- Assets/Grenades/Mods/Model_1.controller
+- Assets/Grenades/Mods/Throwables/Incendiary Grenade/Use.mp3
+- Assets/Grenades/Mods/Flash boom.anim
+- Assets/Grenades/Mods/Throwables/Flashbang/Equip.mp3
+- Assets/Grenades/Mods/Throwables/Molotov/Equip.mp3
+- Assets/Grenades/Mods/Throwables/Decoy Grenade/Item.prefab
+- Assets/Grenades/Mods/Throwables/Decoy Grenade/Equip.mp3
+- Assets/Grenades/Mat/Materials/Texture.mat
+- "Assets/Grenades/Mods/\u0412\u0437\u0440\u044B\u0432 \u0417\u0430\u0436\u0438\u0433\u0430\u0442\u0435\u043B\u044C\u043D\u0430\u044F.mp3"
+- Assets/Grenades/Mods/Throwables/HE Grenade/Animations.prefab
+- Assets/Grenades/Mat/Materials/22.mat
+- "Assets/Grenades/Mods/\u0412\u0437\u0440\u044B\u0432 \u0414\u044B\u043C.mp3"
+- Assets/Grenades/Mods/Effects/Fire_1/Splatter_0.prefab
+- Assets/Grenades/Mods/Throwables/Smoke Grenade/Throwable.prefab
+- Assets/Grenades/Mat/22.png
+- Assets/Grenades/Mods/Throwables/Flashbang/Throwable.prefab
+- Assets/Grenades/Mods/Throwables/HE Grenade/Item.prefab
+- Assets/Grenades/Mods/Throwables/Incendiary Grenade/Animations.prefab
+- Assets/Grenades/Mat/XE.fbx
+- Assets/Grenades/Mat/Lozh.fbx
+- Assets/Grenades/Mods/Throwables/Flashbang/Item.prefab
+- Assets/Grenades/Mat/Animation 1.fbx
+- Assets/Grenades/Mods/Throwables/Incendiary Grenade/Item.prefab
+- Assets/Grenades/Mods/Throwables/HE Grenade/Equip.mp3
+- Assets/Grenades/Mods/z_uk-pulemeta-1 (mp3cut (mp3cut.net).mp3
+- Assets/Grenades/Mat/Flash.fbx
+Dependencies: []

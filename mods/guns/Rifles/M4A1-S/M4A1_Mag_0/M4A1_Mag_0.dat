@@ -1,0 +1,27 @@
+GUID 60c7cd944daa4be1a113ba516f06aaca
+Type Magazine
+Rarity Uncommon
+ID 18734
+
+Size_X 1
+Size_Y 1
+Size_Z 0.2
+
+Amount 25
+Count_Min 1
+Count_Max 25
+
+Calibers 1
+Caliber_0 10027
+
+Tracer 48
+
+Blueprints 2
+Blueprint_0_Type Ammo
+Blueprint_0_Supplies 1
+Blueprint_0_Supply_0_ID 43
+Blueprint_0_Build 30
+Blueprint_1_Type Ammo
+Blueprint_1_Supplies 1
+Blueprint_1_Supply_0_ID 18734
+Blueprint_1_Build 30

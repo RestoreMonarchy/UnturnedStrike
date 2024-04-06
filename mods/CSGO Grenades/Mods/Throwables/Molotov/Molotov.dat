@@ -1,0 +1,26 @@
+GUID 387e1739864d4bcabc11935fe89ccfa2
+Type Throwable
+Rarity Rare
+Useable Throwable
+ID 13522
+
+Size_X 1
+Size_Y 1
+Size_Z 0.375
+
+Player_Damage 0
+Zombie_Damage 0
+Animal_Damage 0
+Barricade_Damage 0
+Structure_Damage 0
+Vehicle_Damage 0
+Resource_Damage 0
+Object_Damage 0
+
+Range 10
+
+Explosion 13528
+Explosive
+Explode_On_Impact
+Fuse_Length 10
+

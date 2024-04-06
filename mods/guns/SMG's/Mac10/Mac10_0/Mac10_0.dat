@@ -1,0 +1,74 @@
+GUID 0dcdddc198534e2fa8b4e99f15612d67
+Type Gun
+Rarity Common
+Useable Gun
+Slot Primary
+ID 18751
+
+Size_X 3
+Size_Y 2
+Size_Z 0.375
+Size2_Z 0.45
+
+Magazine 18752
+
+Ammo_Min 30
+Ammo_Max 30
+
+Safety
+Semi
+Auto
+
+Caliber 10040
+
+Range 80
+Firerate 4
+Action Trigger
+
+Player_Damage 40
+Player_Leg_Multiplier 0.6
+Player_Arm_Multiplier 0.6
+Player_Spine_Multiplier 0.8
+Player_Skull_Multiplier 1.1
+
+Zombie_Damage 99
+Zombie_Leg_Multiplier 0.3
+Zombie_Arm_Multiplier 0.3
+Zombie_Spine_Multiplier 0.6
+Zombie_Skull_Multiplier 1.1
+
+Animal_Damage 25
+Animal_Leg_Multiplier 0.6
+Animal_Spine_Multiplier 0.8
+Animal_Skull_Multiplier 1.1
+
+Barricade_Damage 12
+Structure_Damage 12
+Vehicle_Damage 25
+Resource_Damage 15
+Object_Damage 15
+
+Durability 0.2
+
+Spread_Aim 0.1
+Spread_Hip 0.3
+
+Recoil_Min_X -4
+Recoil_Min_Y 2.5
+Recoil_Max_X 1.75
+Recoil_Max_Y 3
+
+Recover_X 0.2
+Recover_Y 0.4
+
+Shake_Min_X -0.005
+Shake_Min_Y 0.005
+Shake_Min_Z -0.05
+Shake_Max_X 0.005
+Shake_Max_Y -0.005
+Shake_Max_Z -0.075
+
+Muzzle 3
+
+Asset_Bundle_Version 3
+

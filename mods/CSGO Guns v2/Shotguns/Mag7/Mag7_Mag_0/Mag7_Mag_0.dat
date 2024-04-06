@@ -1,0 +1,23 @@
+GUID 60bf8aec78b344189c427716c24fd7ad
+Type Magazine
+Rarity Common
+ID 18774
+
+Size_X 1
+Size_Y 1
+Size_Z 0.4
+
+Amount 5
+Count_Min 5
+Count_Max 5
+
+Speed 0.5
+
+Calibers 1
+Caliber_0 10056
+
+Pellets 8
+
+Tracer 48
+
+Delete_Empty

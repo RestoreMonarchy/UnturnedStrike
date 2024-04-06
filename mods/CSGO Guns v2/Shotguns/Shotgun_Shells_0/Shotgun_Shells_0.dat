@@ -1,0 +1,30 @@
+GUID 453480d7983947e28cc5dcd11acd4ed4
+Type Magazine
+Rarity Rare
+ID 18776
+
+Size_X 1
+Size_Y 1
+Size_Z 0.15
+
+Amount 8
+Count_Min 8
+Count_Max 8
+
+Calibers 1
+Caliber_0 10058
+
+Speed 0.6
+
+Pellets 6
+
+Tracer 48
+
+Blueprints 1
+Blueprint_0_Type Ammo
+Blueprint_0_Supplies 1
+Blueprint_0_Supply_0_ID 18776
+Blueprint_0_Build 30
+
+Delete_Empty
+Auto_Icon_Camera False

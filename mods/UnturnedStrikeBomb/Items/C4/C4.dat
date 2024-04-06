@@ -1,0 +1,20 @@
+GUID 6256775976d94928afad3c7234528cb6
+Type Barricade
+Rarity Epic
+Useable Barricade
+Build Barricade
+ID 13661
+
+Size_X 1
+Size_Y 1
+Size_Z 0.35
+
+Health 1
+Range 4
+Offset 0.05
+
+Player_Damage 1000
+
+Invulnerable
+Unrepairable
+Proof_Explosion

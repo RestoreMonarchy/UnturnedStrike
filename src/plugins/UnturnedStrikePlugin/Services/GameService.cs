@@ -243,6 +243,12 @@ namespace UnturnedStrike.Plugin.Services
                 player.GameWinComponent.Show(msg);
             }
 
+            foreach (var player in pluginInstance.SpectatorService.Spectators)
+            {
+                player.HideWaitingUI();
+                player.GameWinComponent.Show(msg);
+            }
+
             Invoke("FinishGame", pluginInstance.Configuration.Instance.NewGameStartDelay);
         }
 

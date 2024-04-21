@@ -7,13 +7,13 @@ namespace UnturnedStrike.Plugin.Effects
     public class GameWinEffectComponent : MonoBehaviour
     {
         private UnturnedStrikePlugin pluginInstance => UnturnedStrikePlugin.Instance;
-        public GamePlayer Player { get; private set; }
+        public UnturnedStrikePlayer Player { get; private set; }
 
         public const int Key = 2582;
 
         void Awake()
         {
-            Player = GetComponent<GamePlayer>();
+            Player = GetComponent<UnturnedStrikePlayer>();
         }
 
         public void Show(string msg)

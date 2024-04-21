@@ -1,4 +1,5 @@
-﻿using SDG.Unturned;
+﻿using Rocket.Unturned.Chat;
+using SDG.Unturned;
 using System.Linq;
 using UnityEngine;
 using UnturnedStrike.Plugin.Components;
@@ -9,7 +10,7 @@ namespace UnturnedStrike.Plugin.Effects
     {
         private UnturnedStrikePlugin pluginInstance => UnturnedStrikePlugin.Instance;
 
-        public GamePlayer Player { get; set; }
+        public UnturnedStrikePlayer Player { get; set; }
 
         public const int Key = 2581;
 
@@ -18,16 +19,22 @@ namespace UnturnedStrike.Plugin.Effects
         void Awake()
         {
             IsOpened = false;
-            Player = GetComponent<GamePlayer>();            
+            Player = GetComponent<UnturnedStrikePlayer>();            
         }
 
         void Start()
         {
             Player.OnPluginKeyTicked += OnPluginKeyTicked;
+            Rocket.Core.Logging.Logger.Log($"LeaderboardEffectComponent.Start {Player.DisplayName}");
         }
 
         private void OnPluginKeyTicked(uint simulation, byte key, bool state)
         {
+            if (state)
+            {
+                Rocket.Core.Logging.Logger.Log($"LeaderboardEffectComponent.OnPluginKeyTicked {key} {state}");
+            }
+            
             if (key == 1)
             {
                 if (state)
@@ -48,10 +55,9 @@ namespace UnturnedStrike.Plugin.Effects
             if (!IsOpened)
             {
                 EffectManager.sendUIEffect(pluginInstance.Configuration.Instance.LeaderboardEffectId, Key, Player.TransportConnection, true);
-
                 
                 string itemString;
-                foreach (var group in Player.GameService.StatisticsService.GetPlayingPlayersStats().GroupBy(x => x.Team))
+                foreach (var group in pluginInstance.GameService.StatisticsService.GetPlayingPlayersStats().GroupBy(x => x.Team))
                 {
                     int item = 1;
                     if (group.Key == Models.ETeamType.CounterTerrorist)

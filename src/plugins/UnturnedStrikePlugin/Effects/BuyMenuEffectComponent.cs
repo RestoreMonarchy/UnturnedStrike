@@ -45,7 +45,6 @@ namespace UnturnedStrike.Plugin.Effects
                 return null;
         }
 
-
         void Awake()
         {
             Player = GetComponent<GamePlayer>();

@@ -28,14 +28,6 @@ namespace UnturnedStrike.Plugin.Components
         public delegate void BalanceUpdated();
         public event BalanceUpdated OnBalanceUpdated;
 
-        public delegate void PluginKeyTicked(uint simulation, byte key, bool state);
-        public event PluginKeyTicked OnPluginKeyTicked;
-
-        internal void TriggerOnPluginKeyTick(uint simulation, byte key, bool state)
-        {
-            OnPluginKeyTicked?.Invoke(simulation, key, state);
-        }
-
         protected override void Awake()
         {
             base.Awake();

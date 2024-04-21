@@ -10,16 +10,16 @@ namespace UnturnedStrike.Plugin.Effects
     public class RoundWinEffectComponent : MonoBehaviour
     {
         private UnturnedStrikePlugin pluginInstance => UnturnedStrikePlugin.Instance;
-        public GamePlayer Player { get; private set; }
+        public UnturnedStrikePlayer Player { get; private set; }
         private ITransportConnection TransportConnection => Player.TransportConnection;
 
         public const int Key = 2576;
 
         void Awake()
         {
-            Player = GetComponent<GamePlayer>();
-            Player.GameService.OnRoundWon += StartWinUI;
-            Player.GameService.OnRoundFinished += StopWinUI;
+            Player = GetComponent<UnturnedStrikePlayer>();
+            pluginInstance.GameService.OnRoundWon += StartWinUI;
+            pluginInstance.GameService.OnRoundFinished += StopWinUI;
         }
 
         private void StartWinUI(ETeamType winner, ERounWinType winType, MVP mvp)
@@ -56,8 +56,8 @@ namespace UnturnedStrike.Plugin.Effects
 
         void OnDestroy()
         {
-            Player.GameService.OnRoundWon -= StartWinUI;
-            Player.GameService.OnRoundFinished -= StopWinUI;
+            pluginInstance.GameService.OnRoundWon -= StartWinUI;
+            pluginInstance.GameService.OnRoundFinished -= StopWinUI;
             EffectManager.askEffectClearByID(pluginInstance.Configuration.Instance.WinEffectId, TransportConnection);
         }
     }

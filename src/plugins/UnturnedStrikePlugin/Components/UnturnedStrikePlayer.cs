@@ -28,6 +28,15 @@ namespace UnturnedStrike.Plugin.Components
         public delegate void ButtonClicked(string buttonName);
         public event ButtonClicked OnButtonClicked;
 
+        public delegate void PluginKeyTicked(uint simulation, byte key, bool state);
+        public event PluginKeyTicked OnPluginKeyTicked;
+
+        internal void TriggerOnPluginKeyTick(uint simulation, byte key, bool state)
+        {
+            OnPluginKeyTicked?.Invoke(simulation, key, state);
+            Rocket.Core.Logging.Logger.Log($"UnturnedStrikePlayer.TriggerOnPluginKeyTick {key} {state}");
+        }
+
         public void TriggerOnButtonClicked(string buttonName)
         {
             OnButtonClicked?.Invoke(buttonName);
@@ -47,6 +56,11 @@ namespace UnturnedStrike.Plugin.Components
 
         protected virtual void OnDestroy()
         {
+        }
+
+        public void SelfDestroy()
+        {
+            Destroy(this);
         }
 
         public void ShowWaitingUI()

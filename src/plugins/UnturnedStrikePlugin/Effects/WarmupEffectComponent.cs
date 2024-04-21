@@ -1,11 +1,5 @@
 ﻿using SDG.NetTransport;
 using SDG.Unturned;
-using Steamworks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnturnedStrike.Plugin.Components;
 using UnturnedStrike.Plugin.Services;
@@ -15,7 +9,7 @@ namespace UnturnedStrike.Plugin.Effects
     public class WarmupEffectComponent : MonoBehaviour
     {
         private UnturnedStrikePlugin pluginInstance => UnturnedStrikePlugin.Instance;
-        public GamePlayer Player { get; private set; }
+        public UnturnedStrikePlayer Player { get; private set; }
         private ITransportConnection TransportConnection => Player.TransportConnection;
 
         public const int Key = 4692;
@@ -25,7 +19,7 @@ namespace UnturnedStrike.Plugin.Effects
         void Awake()
         {
             isOpen = false;
-            Player = GetComponent<GamePlayer>();
+            Player = GetComponent<UnturnedStrikePlayer>();
         }
 
         void Start()

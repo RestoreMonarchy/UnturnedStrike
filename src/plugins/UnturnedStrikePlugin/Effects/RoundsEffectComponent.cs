@@ -11,14 +11,14 @@ namespace UnturnedStrike.Plugin.Effects
     {
         private UnturnedStrikePlugin pluginInstance => UnturnedStrikePlugin.Instance;
 
-        public GamePlayer Player { get; set; }
+        public UnturnedStrikePlayer Player { get; set; }
         private ITransportConnection CSteamID => Player.TransportConnection;
 
         public const int Key = 2575;
 
         void Awake()
         {
-            Player = GetComponent<GamePlayer>();
+            Player = GetComponent<UnturnedStrikePlayer>();
         }
 
         void Start()
@@ -34,9 +34,9 @@ namespace UnturnedStrike.Plugin.Effects
             UpdateScore(ETeamType.CounterTerrorist, pluginInstance.GameService.TeamScores[ETeamType.CounterTerrorist]);
             UpdateTime("0");
 
-            Player.GameService.OnTimeUpdated += UpdateTime;
-            Player.GameService.OnAliveUpdated += UpdateAlive;
-            Player.GameService.OnScoreUpdated += UpdateScore;
+            pluginInstance.GameService.OnTimeUpdated += UpdateTime;
+            pluginInstance.GameService.OnAliveUpdated += UpdateAlive;
+            pluginInstance.GameService.OnScoreUpdated += UpdateScore;
         }
 
         public void UpdateScore(ETeamType team, int newScore)
@@ -58,9 +58,9 @@ namespace UnturnedStrike.Plugin.Effects
 
         void OnDestroy()
         {
-            Player.GameService.OnTimeUpdated -= UpdateTime;
-            Player.GameService.OnAliveUpdated -= UpdateAlive;
-            Player.GameService.OnScoreUpdated -= UpdateScore;
+            pluginInstance.GameService.OnTimeUpdated -= UpdateTime;
+            pluginInstance.GameService.OnAliveUpdated -= UpdateAlive;
+            pluginInstance.GameService.OnScoreUpdated -= UpdateScore;
             EffectManager.askEffectClearByID(pluginInstance.Configuration.Instance.RoundsEffectId, CSteamID);
         }
     }

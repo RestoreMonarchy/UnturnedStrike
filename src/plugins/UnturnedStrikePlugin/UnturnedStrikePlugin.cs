@@ -28,6 +28,7 @@ namespace UnturnedStrike.Plugin
         public GameService GameService { get; private set; }
         public LobbyService LobbyService { get; private set; }
         public GameRulesService GameRulesService { get; private set; }
+        public SpectatorService SpectatorService { get; private set; }
 
         public GameObject UnturnedStrikeGameObject { get; set; }
 
@@ -58,6 +59,7 @@ namespace UnturnedStrike.Plugin
                 HarmonyInstance.PatchAll();
                 LobbyService = gameObject.AddComponent<LobbyService>();
                 GameRulesService = gameObject.AddComponent<GameRulesService>();
+                SpectatorService = gameObject.AddComponent<SpectatorService>();
                 RestartGame();
                 EffectManager.onEffectButtonClicked += OnEffectButtonClicked;
                 PlayerInput.onPluginKeyTick += OnPluginKeyTick;
@@ -92,9 +94,20 @@ namespace UnturnedStrike.Plugin
 
         private void OnPluginKeyTick(Player player, uint simulation, byte key, bool state)
         {
-            var comp = player.GetComponent<GamePlayer>();
+            if (state)
+            {
+                Logger.Log($"{player.channel.owner.playerID.playerName} key: {key} | state: {state}");
+            }            
+            var comp = player.GetComponent<UnturnedStrikePlayer>();
             if (comp != null)
+            {
+                if (state)
+                {
+                    Logger.Log($"component not null");
+                }
+                
                 comp.TriggerOnPluginKeyTick(simulation, key, state);
+            }
         }
 
         private void OnEffectButtonClicked(Player player, string buttonName)
@@ -193,7 +206,10 @@ namespace UnturnedStrike.Plugin
             { "BombPlantedTime", "" },
             { "RemoveHostageInvalid", "The specified hostage ID is not valid" },
             { "RemoveHostageSuccess", "Successfully removed hostage with ID {0}!" },
-            { "RemoveHostageFail", "Failed to find any hostage with ID {0}" }
+            { "RemoveHostageFail", "Failed to find any hostage with ID {0}" },
+            { "SpectatorModeOff", "Spectator mode disabled" },
+            { "SpectatorModeOn", "Spectator mode enabled" },
+            { "SpectatorFail", "You must not be in any team to go in the spectator mode." }
         };
     }
 }

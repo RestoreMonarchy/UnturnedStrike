@@ -39,6 +39,11 @@ namespace UnturnedStrike.Plugin.Services
                 player.WarmupComponent.Hide();
             }
 
+            foreach (var player in pluginInstance.SpectatorService.Spectators)
+            {
+                player.WarmupComponent.Hide();
+            }
+
             GameService.TeamsService.OnPlayerTeamJoined -= OnPlayerTeamJoined;
             PlayerLife.onPlayerLifeUpdated -= OnPlayerLifeUpdated;
             ItemManager.onServerSpawningItemDrop -= OnServerSpawningItemDrop;

@@ -45,13 +45,9 @@ namespace UnturnedStrike.Plugin.Effects
                 return null;
         }
 
-        void Awake()
-        {
-            Player = GetComponent<GamePlayer>();
-        }
-
         void Start()
         {
+            Player = GetComponent<GamePlayer>();
             Player.OnPluginKeyTicked += OnPluginKeyTicked;
             Player.OnButtonClicked += OnButtonClicked;
             //Player.GameService.OnFreezeStarted += Open;

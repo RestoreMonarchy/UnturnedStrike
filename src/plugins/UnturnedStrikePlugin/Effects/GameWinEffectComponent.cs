@@ -11,7 +11,7 @@ namespace UnturnedStrike.Plugin.Effects
 
         public const int Key = 2582;
 
-        void Awake()
+        void Start()
         {
             Player = GetComponent<UnturnedStrikePlayer>();
         }

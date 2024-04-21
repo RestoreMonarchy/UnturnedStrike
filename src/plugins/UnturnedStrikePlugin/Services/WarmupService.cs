@@ -85,6 +85,7 @@ namespace UnturnedStrike.Plugin.Services
             if (GameService.IsGameStarted)
                 return;
 
+            player.HideWaitingUI();
             SpawnsHelper.TeleportPlayer(player.NativePlayer, EPlayerSpawnType.Warmup);
             WarmupLoadoutsHelper.GiveLoadout(player);
             player.DisableCosmetics();

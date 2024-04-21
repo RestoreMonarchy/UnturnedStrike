@@ -4,6 +4,7 @@ using Rocket.Core;
 using Rocket.Core.Plugins;
 using SDG.Unturned;
 using System;
+using System.Linq;
 using UnityEngine;
 using UnturnedStrike.Plugin.Components;
 using UnturnedStrike.Plugin.Helpers;
@@ -93,19 +94,10 @@ namespace UnturnedStrike.Plugin
         }
 
         private void OnPluginKeyTick(Player player, uint simulation, byte key, bool state)
-        {
-            if (state)
-            {
-                Logger.Log($"{player.channel.owner.playerID.playerName} key: {key} | state: {state}");
-            }            
+        {      
             var comp = player.GetComponent<UnturnedStrikePlayer>();
             if (comp != null)
             {
-                if (state)
-                {
-                    Logger.Log($"component not null");
-                }
-                
                 comp.TriggerOnPluginKeyTick(simulation, key, state);
             }
         }
@@ -119,6 +111,16 @@ namespace UnturnedStrike.Plugin
 
         public void RestartGame()
         {
+            foreach (SpectatorPlayer spectator in SpectatorService.Spectators.ToList())
+            {
+                Player player = spectator.NativePlayer;
+                SpectatorService.Spectators.Remove(spectator);
+                spectator.SelfDestroy();
+
+                player.gameObject.AddComponent<LobbyPlayer>();
+
+            }
+
             if (UnturnedStrikeGameObject != null)
                 Destroy(UnturnedStrikeGameObject);
             UnturnedStrikeGameObject = new GameObject("UnturnedStrikeGame", typeof(GameService));

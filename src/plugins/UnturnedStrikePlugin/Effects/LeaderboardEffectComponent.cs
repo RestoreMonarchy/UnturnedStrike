@@ -1,5 +1,4 @@
-﻿using Rocket.Unturned.Chat;
-using SDG.Unturned;
+﻿using SDG.Unturned;
 using System.Linq;
 using UnityEngine;
 using UnturnedStrike.Plugin.Components;
@@ -18,23 +17,17 @@ namespace UnturnedStrike.Plugin.Effects
 
         void Awake()
         {
-            IsOpened = false;
-            Player = GetComponent<UnturnedStrikePlayer>();            
+            IsOpened = false;            
         }
 
         void Start()
         {
+            Player = GetComponent<UnturnedStrikePlayer>();
             Player.OnPluginKeyTicked += OnPluginKeyTicked;
-            Rocket.Core.Logging.Logger.Log($"LeaderboardEffectComponent.Start {Player.DisplayName}");
         }
 
         private void OnPluginKeyTicked(uint simulation, byte key, bool state)
-        {
-            if (state)
-            {
-                Rocket.Core.Logging.Logger.Log($"LeaderboardEffectComponent.OnPluginKeyTicked {key} {state}");
-            }
-            
+        {            
             if (key == 1)
             {
                 if (state)

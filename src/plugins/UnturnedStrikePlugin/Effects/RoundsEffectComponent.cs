@@ -16,13 +16,9 @@ namespace UnturnedStrike.Plugin.Effects
 
         public const int Key = 2575;
 
-        void Awake()
-        {
-            Player = GetComponent<UnturnedStrikePlayer>();
-        }
-
         void Start()
         {
+            Player = GetComponent<UnturnedStrikePlayer>();
             EffectManager.sendUIEffect(pluginInstance.Configuration.Instance.RoundsEffectId, Key, CSteamID, true);
 
             EffectManager.sendUIEffectText(Key, CSteamID, true, "csgo_text_teama", pluginInstance.Translate("TT"));

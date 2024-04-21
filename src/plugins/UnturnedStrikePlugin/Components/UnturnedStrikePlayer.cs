@@ -34,7 +34,6 @@ namespace UnturnedStrike.Plugin.Components
         internal void TriggerOnPluginKeyTick(uint simulation, byte key, bool state)
         {
             OnPluginKeyTicked?.Invoke(simulation, key, state);
-            Rocket.Core.Logging.Logger.Log($"UnturnedStrikePlayer.TriggerOnPluginKeyTick {key} {state}");
         }
 
         public void TriggerOnButtonClicked(string buttonName)

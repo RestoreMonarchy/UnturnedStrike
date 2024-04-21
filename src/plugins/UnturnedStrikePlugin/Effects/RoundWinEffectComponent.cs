@@ -15,7 +15,7 @@ namespace UnturnedStrike.Plugin.Effects
 
         public const int Key = 2576;
 
-        void Awake()
+        void Start()
         {
             Player = GetComponent<UnturnedStrikePlayer>();
             pluginInstance.GameService.OnRoundWon += StartWinUI;

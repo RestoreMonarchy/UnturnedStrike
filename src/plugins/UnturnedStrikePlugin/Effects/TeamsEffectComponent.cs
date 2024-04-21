@@ -20,8 +20,8 @@ namespace UnturnedStrike.Plugin.Effects
 
         void Awake()
         {
-            Player = GetComponent<LobbyPlayer>();
             IsOpened = false;
+            Player = GetComponent<LobbyPlayer>();
         }
 
         void Start()

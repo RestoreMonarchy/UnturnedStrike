@@ -19,11 +19,11 @@ namespace UnturnedStrike.Plugin.Effects
         void Awake()
         {
             isOpen = false;
-            Player = GetComponent<UnturnedStrikePlayer>();
         }
 
         void Start()
         {
+            Player = GetComponent<UnturnedStrikePlayer>();
             WarmupService.OnWarmupTitleUpdated += UpdateMessage;
         }
 

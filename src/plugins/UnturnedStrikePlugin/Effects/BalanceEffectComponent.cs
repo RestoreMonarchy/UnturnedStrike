@@ -15,13 +15,9 @@ namespace UnturnedStrike.Plugin.Effects
 
         public const int Key = 2577;
 
-        void Awake()
-        {
-            Player = GetComponent<GamePlayer>();
-        }
-
         void Start()
         {
+            Player = GetComponent<GamePlayer>();
             EffectManager.sendUIEffect(pluginInstance.Configuration.Instance.BalanceEffectId, Key, TransportConnection, true);
             UpdateBalance();
             Player.OnBalanceUpdated += UpdateBalance;

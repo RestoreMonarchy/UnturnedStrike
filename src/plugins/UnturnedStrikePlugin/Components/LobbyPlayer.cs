@@ -23,6 +23,8 @@ namespace UnturnedStrike.Plugin.Components
         {
             Destroy(TeamsEffectComponent);
             base.OnDestroy();
+
+            Rocket.Core.Logging.Logger.Log("LobbyPlayer destroyed");
         }
     }
 }

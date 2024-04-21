@@ -6,6 +6,7 @@ using Rocket.Core.Plugins;
 using Rocket.Core.Utils;
 using Rocket.Unturned;
 using Rocket.Unturned.Player;
+using SDG.NetTransport;
 using SDG.Unturned;
 using Steamworks;
 using System.Collections.Generic;
@@ -115,19 +116,28 @@ namespace KillFeedPlugin
             {
                 if (KillFeedItems.IndexOf(newItem) <= 4)
                 {                    
-                    foreach (var player in UnturnedStrikePlugin.Instance.TeamsService.Players)
-                        EffectManager.sendUIEffectVisibility(Key, player.TransportConnection, false, KillFeedItems.IndexOf(newItem).ToString(), false);
+                    foreach (SteamPlayer client in Provider.clients)
+                    {
+                        ITransportConnection transportConnection = client.player.channel.GetOwnerTransportConnection();
+                        EffectManager.sendUIEffectVisibility(Key, transportConnection, false, KillFeedItems.IndexOf(newItem).ToString(), false);
+                    }                        
                 }
                 KillFeedItems.Remove(newItem);
             }, Configuration.Instance.ShowDuration);
 
-            foreach (var player in UnturnedStrikePlugin.Instance.TeamsService.Players)
-                EffectManager.sendUIEffectVisibility(Key, player.TransportConnection, false, (KillFeedItems.Count - 1).ToString(), true);
+            foreach (SteamPlayer client in Provider.clients)
+            {
+                ITransportConnection transportConnection = client.player.channel.GetOwnerTransportConnection();
+                EffectManager.sendUIEffectVisibility(Key, transportConnection, false, (KillFeedItems.Count - 1).ToString(), true);
+            }
 
             for (int i = 0; i < System.Math.Min(KillFeedItems.Count, 5); i++)
             {
-                foreach (var player in UnturnedStrikePlugin.Instance.TeamsService.Players)
-                    EffectManager.sendUIEffectText(Key, player.TransportConnection, false, $"Text{i}", KillFeedItems[i].Text);   
+                foreach (SteamPlayer client in Provider.clients)
+                {
+                    ITransportConnection transportConnection = client.player.channel.GetOwnerTransportConnection();
+                    EffectManager.sendUIEffectText(Key, transportConnection, false, $"Text{i}", KillFeedItems[i].Text);
+                }                    
             }
         }
 
